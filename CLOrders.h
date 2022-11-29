@@ -1,7 +1,8 @@
 #pragma once
 #include "pch.h"
+#include "CLCustomer.h"
 namespace NS_Models {
-	ref class CLOrders
+	ref class CLOrders :public Customer
 	{
 	protected:
 		int id_order;
@@ -12,18 +13,20 @@ namespace NS_Models {
 		float total_price;
 	public:
 		void setId_order(int);
+		void setIssuing_date(String^);
 		void reference(String^);
 		void setDelivery_date(String^);
 		void setTotal_price(float);
 		void setTotal_price_df(float);
 		int getId_order(void);
+		String^ getIssuing_date(void);
 		String^ getOrders_Reference(void);
 		String^ getDelivery_date(void);
 		float getTotal_price(void);
 		float getTotal_price_df(void);
-		virtual String^ Select(void);
-		virtual String^ Insert(void);
-		virtual String^ Update(void);
-		virtual String^ Delete(void);
+		virtual String^ Select(void) override ;
+		virtual String^ Insert(void) override;
+		virtual String^ Update(void) override;
+		virtual String^ Delete(void) override;
 	};
 }

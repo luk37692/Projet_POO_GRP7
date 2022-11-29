@@ -20,15 +20,15 @@ void NS_Models::CLPeople::setLast_name(String^ nom) {
 	this->last_name = nom;
 }
 int NS_Models::CLPeople::getId(void) {
-	return id;
+	return this->id;
 }
 
 String^ NS_Models::CLPeople::getFirst_name(void) {
-	return first_name;
+	return this->first_name;
 }
 
 String^ NS_Models::CLPeople::getLast_name(void) {
-	return last_name;
+	return this->last_name;
 }
 
 String^ NS_Models::CLPeople::Insert(void) {

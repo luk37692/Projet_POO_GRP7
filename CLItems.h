@@ -12,7 +12,6 @@ namespace NS_Models {
 		float price_df;
 	public:
 		CLItems();
-		~CLItems();
 		void setId_items(int);
 		void setQuantity(int);
 		void setItems_reference(String^);

@@ -13,14 +13,19 @@ namespace NS_Models {
 	public:
 		void setEmployeeUpperHierarchy(int);
 		void setEmployeeHiringDate(String^);
-		void setEmployeeRank(int);
+		void setEmployeeRank(String^);
 		void setEmployeePassword(String^);
 		void setEmployeeEmail(String^);
 		int getEmployee(void);
-		/*virtual String^ Select(void);
-		virtual String^ Insert(void);
-		virtual String^ Update(void);
-		virtual String^ Delete(void);*/
+		int getUpper_hierarchy_id(void);
+		String^ getHiring_date(void);
+		String^ getRank(void);
+		String^ getPassword(void);
+		String^ getEmail(void);
+		virtual String^ Select(void) override;
+		virtual String^ Insert(void) override;
+		virtual String^ Update(void) override;
+		virtual String^ Delete(void) override;
 
 	};
 }
