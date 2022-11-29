@@ -122,6 +122,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CLAddresses.cpp" />
+    <ClCompile Include="CLMean_of_payment.cpp" />
     <ClCompile Include="dbConnect.cpp" />
     <ClCompile Include="CLCity.cpp" />
     <ClCompile Include="CLComposed.cpp" />
@@ -135,6 +136,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CLAddresses.h" />
+    <ClInclude Include="CLMean_of_payment.h" />
     <ClInclude Include="dbConnect.h" />
     <ClInclude Include="CLCity.h" />
     <ClInclude Include="CLComposed.h" />

@@ -3,9 +3,9 @@
 namespace NS_Models {
 	ref class CLPeople
 	{
-	private :
+	protected :
 		int id;
-		String^ fisrt_name;
+		String^ first_name;
 		String^ last_name;
 	public:
 		CLPeople();

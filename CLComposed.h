@@ -2,10 +2,10 @@
 #include"pch.h"
 #include "CLOrders.h"
 namespace NS_Models {
-	ref class CLComposed
+	 class CLComposed
 	{
 		int quantity_ordered;
-		String^ color;
-		//CLComposed *next;
+		string color;
+		CLComposed *next;
 	};
 }

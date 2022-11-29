@@ -3,10 +3,10 @@
 namespace NS_Models {
 	ref class CLOrders
 	{
-	private:
+	protected:
 		int id_order;
 		String^ issuing_date;
-		String^ reference;
+		String^ orders_reference;
 		String^ delivery_date;
 		float total_price_df; 
 		float total_price;
@@ -17,7 +17,7 @@ namespace NS_Models {
 		void setTotal_price(float);
 		void setTotal_price_df(float);
 		int getId_order(void);
-		String^ getReference(void);
+		String^ getOrders_Reference(void);
 		String^ getDelivery_date(void);
 		float getTotal_price(void);
 		float getTotal_price_df(void);
