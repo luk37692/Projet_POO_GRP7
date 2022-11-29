@@ -16,6 +16,7 @@ namespace NS_Composants
 		String^ additional_address_data;
 		String^ type;
 	public:
+
 		Address();
 		virtual String^ SELECT(void);
 		virtual String^ INSERT(void);
