@@ -9,13 +9,12 @@ namespace NS_Models {
 		int postal_code;
 	public:
 		CLCity();
-		~CLCity();
 		void setId_city(int);
 		void setName_city(String^);
 		void setPostal_code(int);
 		int getPostal_code(void);
-		int getName_city(void);
+		String^ getName_city(void);
 		int getId_city(void);
 
 	};
-}
+} 

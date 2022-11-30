@@ -19,6 +19,9 @@ int NS_Models::Employee::getEmployee(void) {
 	return getId();
 }
 
+void NS_Models::Employee::setEmplyeeID(int _eId) {
+	this->setId(_eId);
+}
 void NS_Models::Employee::setEmployeeUpperHierarchy(int _id) {
 	this->upper_hierarchy_id = _id;
 }

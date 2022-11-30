@@ -4,10 +4,6 @@ NS_Models::CLPeople::CLPeople() {
 	this->first_name = "Default";
 	this->last_name = "Default";
 }
-NS_Models::CLPeople::~CLPeople() {
-	
-}
-
 void NS_Models::CLPeople::setId(int i) {
 	this->id = i;
 }

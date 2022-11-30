@@ -16,6 +16,7 @@ namespace NS_Models {
 		void setEmployeeRank(String^);
 		void setEmployeePassword(String^);
 		void setEmployeeEmail(String^);
+		void setEmplyeeID(int);
 		int getEmployee(void);
 		int getUpper_hierarchy_id(void);
 		String^ getHiring_date(void);

@@ -9,7 +9,6 @@ namespace NS_Models {
 		String^ last_name;
 	public:
 		CLPeople();
-		~CLPeople();
 		virtual String^ Select(void) ;
 		virtual String^ Insert(void) ;
 		virtual String^ Update(void) ;

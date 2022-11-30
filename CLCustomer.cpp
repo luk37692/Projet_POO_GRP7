@@ -7,7 +7,7 @@ NS_Models::Customer::Customer(){
 }
 
 void NS_Models::Customer::setCustomer_id(int _id) {
-	this->id = _id;
+	this->setId(_id);
 }
 void NS_Models::Customer::setCustomer_Birth_Date(String^ _birth_date ) {
 	this->birth_date = _birth_date;

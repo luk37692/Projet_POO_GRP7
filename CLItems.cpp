@@ -1,7 +1,7 @@
 #include "CLItems.h"
 NS_Models::CLItems::CLItems() {
 	this->id_items = NULL;
-	this->quantity = 1;
+	this->quantity = 0;
 	this->items_reference = "default";
 	this->type = "default";
 	this->name = "default";

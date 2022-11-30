@@ -2,6 +2,9 @@
 void NS_Models::CLOrders::setId_order(int _order) {
 	this->id_order = _order;
 }
+void NS_Models::CLOrders::setId_customer(int cus_ID) {
+	this->setId(cus_ID);
+}
 void NS_Models::CLOrders::reference(String^ _ref) {
 	this->orders_reference = _ref;
 }
@@ -21,6 +24,10 @@ void NS_Models::CLOrders::setIssuing_date(String^ issuing_date_) {
 int NS_Models::CLOrders::getId_order(void) {
 	return this->id_order;
 }
+int NS_Models::CLOrders::getId_customer(void) {
+	return getId();
+}
+
 String^ NS_Models::CLOrders::getIssuing_date(void) {
 	return this->issuing_date;
 }
