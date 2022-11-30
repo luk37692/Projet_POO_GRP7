@@ -13,18 +13,18 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Fichiers de Mappage">
+      <UniqueIdentifier>{a150536c-845a-4b85-ae7c-551515d60133}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de Mappage\Fichiers d%27en-tête">
+      <UniqueIdentifier>{cfff3e93-24bc-424c-ae48-8a1e96c020e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de Mappage\Fichiers sources">
+      <UniqueIdentifier>{2e5452da-554f-4e8d-8c07-5997c4e17fd0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Address.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="People.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="MyForm.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="DbConnect.cpp">
+    <ClCompile Include="CustomerForm.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="CustomerAddForm.cpp">
@@ -33,21 +33,21 @@
     <ClCompile Include="AddressAddForm.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="CtrlCustomers.cpp">
+    <ClCompile Include="MyForm.cpp">
       <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="People.cpp">
+      <Filter>Fichiers de Mappage\Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="DbConnect.cpp">
+      <Filter>Fichiers de Mappage\Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Address.cpp">
+      <Filter>Fichiers de Mappage\Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Address.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="People.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="MyForm.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="DbConnect.h">
+    <ClInclude Include="CustomerForm.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="CustomerAddForm.h">
@@ -56,8 +56,17 @@
     <ClInclude Include="AddressAddForm.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="CtrlCustomers.h">
+    <ClInclude Include="MyForm.h">
       <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="People.h">
+      <Filter>Fichiers de Mappage\Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="DbConnect.h">
+      <Filter>Fichiers de Mappage\Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Address.h">
+      <Filter>Fichiers de Mappage\Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

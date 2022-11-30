@@ -124,9 +124,9 @@
   <ItemGroup>
     <ClCompile Include="Address.cpp" />
     <ClCompile Include="AddressAddForm.cpp" />
-    <ClCompile Include="CtrlCustomers.cpp" />
     <ClCompile Include="CustomerAddForm.cpp" />
     <ClCompile Include="DbConnect.cpp" />
+    <ClCompile Include="CustomerForm.cpp" />
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="People.cpp" />
   </ItemGroup>
@@ -135,19 +135,27 @@
     <ClInclude Include="AddressAddForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="CtrlCustomers.h" />
     <ClInclude Include="CustomerAddForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="DbConnect.h" />
+    <ClInclude Include="CustomerForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="People.h" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AddressAddForm.resx">
+      <DependentUpon>AddressAddForm.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomerAddForm.resx">
       <DependentUpon>CustomerAddForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerForm.resx">
+      <DependentUpon>CustomerForm.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyForm.resx">
       <DependentUpon>MyForm.h</DependentUpon>

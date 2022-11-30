@@ -62,8 +62,11 @@ namespace ProjetPOOGRP7 {
 
 	private: System::Windows::Forms::Label^ label5;
 	private: System::Windows::Forms::DateTimePicker^ cust_birthdate_picker;
-	private: System::Windows::Forms::RadioButton^ radioButton1;
-	private: System::Windows::Forms::RadioButton^ radioButton2;
+	private: System::Windows::Forms::RadioButton^ SameBD_button;
+	private: System::Windows::Forms::RadioButton^ NotSameBandD;
+
+
+
 	private: System::Windows::Forms::TextBox^ textBox4;
 
 
@@ -99,8 +102,8 @@ namespace ProjetPOOGRP7 {
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->cust_birthdate_picker = (gcnew System::Windows::Forms::DateTimePicker());
-			this->radioButton1 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton2 = (gcnew System::Windows::Forms::RadioButton());
+			this->SameBD_button = (gcnew System::Windows::Forms::RadioButton());
+			this->NotSameBandD = (gcnew System::Windows::Forms::RadioButton());
 			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
 			this->SuspendLayout();
 			// 
@@ -255,28 +258,28 @@ namespace ProjetPOOGRP7 {
 			this->cust_birthdate_picker->Size = System::Drawing::Size(133, 22);
 			this->cust_birthdate_picker->TabIndex = 18;
 			// 
-			// radioButton1
+			// SameBD_button
 			// 
-			this->radioButton1->AutoSize = true;
-			this->radioButton1->Location = System::Drawing::Point(317, 204);
-			this->radioButton1->Name = L"radioButton1";
-			this->radioButton1->Size = System::Drawing::Size(168, 36);
-			this->radioButton1->TabIndex = 19;
-			this->radioButton1->TabStop = true;
-			this->radioButton1->Text = L"Facturation et Livraison \r\nIDENTIQUE\r\n";
-			this->radioButton1->UseVisualStyleBackColor = true;
+			this->SameBD_button->AutoSize = true;
+			this->SameBD_button->Location = System::Drawing::Point(317, 204);
+			this->SameBD_button->Name = L"SameBD_button";
+			this->SameBD_button->Size = System::Drawing::Size(168, 36);
+			this->SameBD_button->TabIndex = 19;
+			this->SameBD_button->TabStop = true;
+			this->SameBD_button->Text = L"Facturation et Livraison \r\nIDENTIQUE\r\n";
+			this->SameBD_button->UseVisualStyleBackColor = true;
 			// 
-			// radioButton2
+			// NotSameBandD
 			// 
-			this->radioButton2->AutoSize = true;
-			this->radioButton2->Location = System::Drawing::Point(507, 204);
-			this->radioButton2->Name = L"radioButton2";
-			this->radioButton2->Size = System::Drawing::Size(168, 36);
-			this->radioButton2->TabIndex = 20;
-			this->radioButton2->TabStop = true;
-			this->radioButton2->Text = L"Facturation et Livraison \r\nDIFFERENTES";
-			this->radioButton2->UseVisualStyleBackColor = true;
-			this->radioButton2->CheckedChanged += gcnew System::EventHandler(this, &CustomerAddForm::comboBox1_SelectedIndexChanged);
+			this->NotSameBandD->AutoSize = true;
+			this->NotSameBandD->Location = System::Drawing::Point(507, 204);
+			this->NotSameBandD->Name = L"NotSameBandD";
+			this->NotSameBandD->Size = System::Drawing::Size(168, 36);
+			this->NotSameBandD->TabIndex = 20;
+			this->NotSameBandD->TabStop = true;
+			this->NotSameBandD->Text = L"Facturation et Livraison \r\nDIFFERENTES";
+			this->NotSameBandD->UseVisualStyleBackColor = true;
+			this->NotSameBandD->Click += gcnew System::EventHandler(this, &CustomerAddForm::NotSameBandD_Click);
 			// 
 			// textBox4
 			// 
@@ -290,10 +293,10 @@ namespace ProjetPOOGRP7 {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(690, 316);
+			this->ClientSize = System::Drawing::Size(688, 308);
 			this->Controls->Add(this->textBox4);
-			this->Controls->Add(this->radioButton2);
-			this->Controls->Add(this->radioButton1);
+			this->Controls->Add(this->NotSameBandD);
+			this->Controls->Add(this->SameBD_button);
 			this->Controls->Add(this->cust_birthdate_picker);
 			this->Controls->Add(this->label5);
 			this->Controls->Add(this->label4);
@@ -323,5 +326,9 @@ namespace ProjetPOOGRP7 {
 		AddressAddForm^ addform = gcnew AddressAddForm();
 		addform->ShowDialog();
 	}
+private: System::Void NotSameBandD_Click(System::Object^ sender, System::EventArgs^ e) {
+	AddressAddForm^ addform = gcnew AddressAddForm();
+	addform->ShowDialog();
+}
 };
 }
