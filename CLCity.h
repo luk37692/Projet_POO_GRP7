@@ -1,5 +1,6 @@
 #pragma once
 #include "pch.h"
+
 namespace NS_Models {
 	ref class CLCity
 	{
