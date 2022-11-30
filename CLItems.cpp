@@ -1,7 +1,6 @@
 #include "CLItems.h"
 NS_Models::CLItems::CLItems() {
 	this->id_items = NULL;
-	this->quantity = 0;
 	this->items_reference = "default";
 	this->type = "default";
 	this->name = "default";
@@ -11,9 +10,7 @@ void NS_Models::CLItems::setId_items(int _id_items) {
 	this->id_items = _id_items;
 }
 
-void NS_Models::CLItems::setQuantity(int _quantity) {
-	this->quantity = _quantity;
-}
+
 void NS_Models::CLItems::setItems_reference(String^ _items_ref) {
 	this->items_reference = _items_ref;
 }
@@ -29,9 +26,7 @@ void NS_Models::CLItems::setPrice_df(float _price_df) {
 int NS_Models::CLItems::getId_items(void) {
 	return this->id_items;
 }
-int NS_Models::CLItems::getQuantity(void) {
-	return this->quantity;
-}
+
 String^ NS_Models::CLItems::getItems_reference(void) {
 	return this->items_reference;
 }

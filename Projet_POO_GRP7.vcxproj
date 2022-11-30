@@ -122,10 +122,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CLAddresses.cpp" />
+    <ClCompile Include="CLColors.cpp" />
+    <ClCompile Include="CLColor_discount.cpp" />
     <ClCompile Include="CLMean_of_payment.cpp" />
+    <ClCompile Include="CLquantity_discount.cpp" />
     <ClCompile Include="dbConnect.cpp" />
     <ClCompile Include="CLCity.cpp" />
-    <ClCompile Include="CLComposed.cpp" />
+    <ClCompile Include="CLOrders_line.cpp" />
     <ClCompile Include="CLCustomer.cpp" />
     <ClCompile Include="CLEmployee.cpp" />
     <ClCompile Include="CLItems.cpp" />
@@ -136,10 +139,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CLAddresses.h" />
+    <ClInclude Include="CLColors.h" />
+    <ClInclude Include="CLColor_discount.h" />
     <ClInclude Include="CLMean_of_payment.h" />
+    <ClInclude Include="CLquantity_discount.h" />
     <ClInclude Include="dbConnect.h" />
     <ClInclude Include="CLCity.h" />
-    <ClInclude Include="CLComposed.h" />
+    <ClInclude Include="CLOrders_line.h" />
     <ClInclude Include="CLCustomer.h" />
     <ClInclude Include="CLEmployee.h" />
     <ClInclude Include="CLItems.h" />
