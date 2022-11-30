@@ -1,13 +1,13 @@
-#include "MyForm.h"
+#include "CustomerAddForm.h"
 
 using namespace System;
 using namespace System::Windows::Forms;
 
 [STAThreadAttribute]
-void __clrcall WinMain(array<String^>^ args) {
+void AddFormMain(array<String^>^ args) {
     Application::EnableVisualStyles();
     Application::SetCompatibleTextRenderingDefault(false);
     //WinformCDemo is jour project name
-    ProjetPOOGRP7::MyForm form;
+    ProjetPOOGRP7::CustomerAddForm form;
     Application::Run(% form);
 }
