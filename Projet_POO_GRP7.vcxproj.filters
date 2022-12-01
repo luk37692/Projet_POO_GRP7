@@ -22,8 +22,18 @@
     <Filter Include="Fichiers Forms\Fichiers d%27en-tête">
       <UniqueIdentifier>{576a35ea-91ca-4144-8200-d805623b7d1a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers de Mappage">
+      <UniqueIdentifier>{a150536c-845a-4b85-ae7c-551515d60133}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de Mappage\Fichiers d%27en-tête">
+      <UniqueIdentifier>{cfff3e93-24bc-424c-ae48-8a1e96c020e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de Mappage\Fichiers sources">
+      <UniqueIdentifier>{2e5452da-554f-4e8d-8c07-5997c4e17fd0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
+
     <ClCompile Include="dbConnect.cpp">
       <Filter>Fichiers Mappage\Fichiers sources</Filter>
     </ClCompile>
@@ -59,9 +69,42 @@
     </ClCompile>
     <ClCompile Include="MyForm.cpp">
       <Filter>Fichiers Mappage</Filter>
+    <ClCompile Include="CustomerForm.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomerAddForm.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="AddressAddForm.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="MyForm.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="People.cpp">
+      <Filter>Fichiers de Mappage\Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="DbConnect.cpp">
+      <Filter>Fichiers de Mappage\Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Address.cpp">
+      <Filter>Fichiers de Mappage\Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="UserLogin.cpp">
+      <Filter>Fichiers sources</Filter>
+
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CustomerForm.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomerAddForm.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="AddressAddForm.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
     <ClInclude Include="MyForm.h">
       <Filter>Fichiers Mappage</Filter>
     </ClInclude>
@@ -100,6 +143,18 @@
     </ClInclude>
     <ClInclude Include="pch.h">
       <Filter>Fichiers Mappage\Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="People.h">
+      <Filter>Fichiers de Mappage\Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="DbConnect.h">
+      <Filter>Fichiers de Mappage\Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Address.h">
+      <Filter>Fichiers de Mappage\Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="UserLogin.h">
+      <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
