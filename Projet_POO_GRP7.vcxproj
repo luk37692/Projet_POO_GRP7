@@ -128,6 +128,7 @@
     <ClCompile Include="CLquantity_discount.cpp" />
     <ClCompile Include="Ctrl_Customers.cpp" />
     <ClCompile Include="Ctrl_Employee.cpp" />
+    <ClCompile Include="Ctrl_Items.cpp" />
     <ClCompile Include="Ctrl_Orders.cpp" />
     <ClCompile Include="dbConnect.cpp" />
     <ClCompile Include="CLCity.cpp" />
@@ -148,6 +149,7 @@
     <ClInclude Include="CLquantity_discount.h" />
     <ClInclude Include="Ctrl_Customers.h" />
     <ClInclude Include="Ctrl_Employee.h" />
+    <ClInclude Include="Ctrl_Items.h" />
     <ClInclude Include="Ctrl_Orders.h" />
     <ClInclude Include="dbConnect.h" />
     <ClInclude Include="CLCity.h" />
