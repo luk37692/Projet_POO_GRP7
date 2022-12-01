@@ -1,7 +1,7 @@
 #include "dbConnect.h"
 NS_Models::dbConnect::dbConnect(void)
 {
-	this->sCnx = "Data Source=LAPTOP-16SKBVQI\\MSSQL_ROMAIN;Initial Catalog=POO_GRP7;User ID=CNX;Password=azerty";
+	this->sCnx = "Data Source=LAPTOP-16SKBVQI\MSSQL_ROMAIN;Initial Catalog=POO_GRP7;Persist Security Info=True;User ID=CNX;Password=azerty";
 
 	this->sSql = "Rien";
 
