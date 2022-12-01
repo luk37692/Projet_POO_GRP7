@@ -90,7 +90,7 @@ namespace ProjetPOOGRP7 {
 			this->id_label->AutoSize = true;
 			this->id_label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->id_label->Location = System::Drawing::Point(12, 30);
+			this->id_label->Location = System::Drawing::Point(25, 30);
 			this->id_label->Name = L"id_label";
 			this->id_label->Size = System::Drawing::Size(42, 38);
 			this->id_label->TabIndex = 0;
@@ -101,7 +101,7 @@ namespace ProjetPOOGRP7 {
 			this->fname_label->AutoSize = true;
 			this->fname_label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->fname_label->Location = System::Drawing::Point(12, 94);
+			this->fname_label->Location = System::Drawing::Point(12, 116);
 			this->fname_label->Name = L"fname_label";
 			this->fname_label->Size = System::Drawing::Size(127, 38);
 			this->fname_label->TabIndex = 1;
@@ -112,7 +112,7 @@ namespace ProjetPOOGRP7 {
 			this->lname_label->AutoSize = true;
 			this->lname_label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lname_label->Location = System::Drawing::Point(12, 167);
+			this->lname_label->Location = System::Drawing::Point(12, 215);
 			this->lname_label->Name = L"lname_label";
 			this->lname_label->Size = System::Drawing::Size(80, 38);
 			this->lname_label->TabIndex = 2;
@@ -120,28 +120,28 @@ namespace ProjetPOOGRP7 {
 			// 
 			// id_text
 			// 
-			this->id_text->Location = System::Drawing::Point(225, 30);
+			this->id_text->Location = System::Drawing::Point(151, 45);
 			this->id_text->Name = L"id_text";
 			this->id_text->Size = System::Drawing::Size(146, 22);
 			this->id_text->TabIndex = 3;
 			// 
 			// fname_text
 			// 
-			this->fname_text->Location = System::Drawing::Point(225, 94);
+			this->fname_text->Location = System::Drawing::Point(151, 131);
 			this->fname_text->Name = L"fname_text";
 			this->fname_text->Size = System::Drawing::Size(146, 22);
 			this->fname_text->TabIndex = 4;
 			// 
 			// lname_text
 			// 
-			this->lname_text->Location = System::Drawing::Point(225, 182);
+			this->lname_text->Location = System::Drawing::Point(151, 230);
 			this->lname_text->Name = L"lname_text";
 			this->lname_text->Size = System::Drawing::Size(146, 22);
 			this->lname_text->TabIndex = 5;
 			// 
 			// add_employee_button
 			// 
-			this->add_employee_button->Location = System::Drawing::Point(19, 288);
+			this->add_employee_button->Location = System::Drawing::Point(478, 30);
 			this->add_employee_button->Name = L"add_employee_button";
 			this->add_employee_button->Size = System::Drawing::Size(140, 75);
 			this->add_employee_button->TabIndex = 6;
@@ -151,7 +151,7 @@ namespace ProjetPOOGRP7 {
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(19, 383);
+			this->button1->Location = System::Drawing::Point(478, 111);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(140, 75);
 			this->button1->TabIndex = 7;
@@ -160,7 +160,7 @@ namespace ProjetPOOGRP7 {
 			// 
 			// button2
 			// 
-			this->button2->Location = System::Drawing::Point(19, 484);
+			this->button2->Location = System::Drawing::Point(478, 194);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(140, 75);
 			this->button2->TabIndex = 8;
@@ -169,9 +169,9 @@ namespace ProjetPOOGRP7 {
 			// 
 			// button3
 			// 
-			this->button3->Location = System::Drawing::Point(231, 288);
+			this->button3->Location = System::Drawing::Point(325, 30);
 			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(140, 75);
+			this->button3->Size = System::Drawing::Size(118, 239);
 			this->button3->TabIndex = 9;
 			this->button3->Text = L"Rechercher";
 			this->button3->UseVisualStyleBackColor = true;
@@ -179,21 +179,21 @@ namespace ProjetPOOGRP7 {
 			// dataGridView1
 			// 
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView1->Location = System::Drawing::Point(468, 30);
+			this->dataGridView1->Location = System::Drawing::Point(669, 30);
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->RowHeadersWidth = 51;
 			this->dataGridView1->RowTemplate->Height = 24;
-			this->dataGridView1->Size = System::Drawing::Size(628, 212);
+			this->dataGridView1->Size = System::Drawing::Size(675, 239);
 			this->dataGridView1->TabIndex = 10;
 			// 
 			// dataGridView2
 			// 
 			this->dataGridView2->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView2->Location = System::Drawing::Point(468, 347);
+			this->dataGridView2->Location = System::Drawing::Point(669, 401);
 			this->dataGridView2->Name = L"dataGridView2";
 			this->dataGridView2->RowHeadersWidth = 51;
 			this->dataGridView2->RowTemplate->Height = 24;
-			this->dataGridView2->Size = System::Drawing::Size(628, 212);
+			this->dataGridView2->Size = System::Drawing::Size(675, 212);
 			this->dataGridView2->TabIndex = 11;
 			// 
 			// CustomerForm
@@ -201,7 +201,7 @@ namespace ProjetPOOGRP7 {
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::Control;
-			this->ClientSize = System::Drawing::Size(1145, 638);
+			this->ClientSize = System::Drawing::Size(1418, 638);
 			this->Controls->Add(this->dataGridView2);
 			this->Controls->Add(this->dataGridView1);
 			this->Controls->Add(this->button3);

@@ -129,6 +129,7 @@
     <ClCompile Include="CustomerForm.cpp" />
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="People.cpp" />
+    <ClCompile Include="UserLogin.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Address.h" />
@@ -146,6 +147,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="People.h" />
+    <ClInclude Include="UserLogin.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AddressAddForm.resx">
@@ -159,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MyForm.resx">
       <DependentUpon>MyForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserLogin.resx">
+      <DependentUpon>UserLogin.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

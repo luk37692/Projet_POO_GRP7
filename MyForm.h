@@ -71,7 +71,7 @@ namespace ProjetPOOGRP7 {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(614, 564);
+			this->ClientSize = System::Drawing::Size(614, 572);
 			this->Controls->Add(this->Manage_Cust_button);
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";

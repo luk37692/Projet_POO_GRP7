@@ -45,6 +45,9 @@
     <ClCompile Include="Address.cpp">
       <Filter>Fichiers de Mappage\Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="UserLogin.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CustomerForm.h">
@@ -67,6 +70,9 @@
     </ClInclude>
     <ClInclude Include="Address.h">
       <Filter>Fichiers de Mappage\Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="UserLogin.h">
+      <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
