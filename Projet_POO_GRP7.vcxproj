@@ -122,16 +122,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+
+    <ClCompile Include="CLAddresses.cpp" />
+    <ClCompile Include="CLMean_of_payment.cpp" />
+    <ClCompile Include="dbConnect.cpp" />
+    <ClCompile Include="CLCity.cpp" />
+    <ClCompile Include="CLComposed.cpp" />
+    <ClCompile Include="CLCustomer.cpp" />
+    <ClCompile Include="CLEmployee.cpp" />
+    <ClCompile Include="CLItems.cpp" />
+    <ClCompile Include="CLMilestone_payments.cpp" />
+    <ClCompile Include="CLOrders.cpp" />
+    <ClCompile Include="CLPeople.cpp" />
+
     <ClCompile Include="Address.cpp" />
     <ClCompile Include="AddressAddForm.cpp" />
     <ClCompile Include="CustomerAddForm.cpp" />
     <ClCompile Include="DbConnect.cpp" />
     <ClCompile Include="CustomerForm.cpp" />
+
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="People.cpp" />
     <ClCompile Include="UserLogin.cpp" />
   </ItemGroup>
   <ItemGroup>
+
+    <ClInclude Include="CLAddresses.h" />
+    <ClInclude Include="CLMean_of_payment.h" />
+    <ClInclude Include="dbConnect.h" />
+    <ClInclude Include="CLCity.h" />
+    <ClInclude Include="CLComposed.h" />
+    <ClInclude Include="CLCustomer.h" />
+    <ClInclude Include="CLEmployee.h" />
+    <ClInclude Include="CLItems.h" />
+    <ClInclude Include="CLMilestone_payments.h" />
+    <ClInclude Include="CLOrders.h" />
+    <ClInclude Include="CLPeople.h" />
+    <ClInclude Include="pch.h" />
+
     <ClInclude Include="Address.h" />
     <ClInclude Include="AddressAddForm.h">
       <FileType>CppForm</FileType>
@@ -143,6 +171,7 @@
     <ClInclude Include="CustomerForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
