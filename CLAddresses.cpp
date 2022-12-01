@@ -10,9 +10,6 @@ NS_Models::CLAddresses::CLAddresses() {
 void NS_Models::CLAddresses::setStreet_name(String^ _sName) {
 	this->street_name = _sName;
 }
-void NS_Models::CLAddresses::setStreet_name(String^ _sName) {
-	this->street_name = _sName;
-}
 void NS_Models::CLAddresses::setStreet_data(String^ _sdata) {
 	this->additional_address_data = _sdata;
 }

@@ -7,7 +7,7 @@ namespace NS_Ctrl {
 		this->OB_empl = gcnew NS_Models::Employee();
 	}
 
-	DataSet^ Ctrl_Employee::listPerson(String^ sDataTableName) {
+	DataSet^ Ctrl_Employee::listEmployee(String^ sDataTableName) {
 		return this->ds = OB_connect->getRows(OB_empl->SELECT(), sDataTableName);
 	}
 	void Ctrl_Employee::ADD(String^ _nom, String^ _prenom, int _upperhierarchy, String^ _hiring_date, String^ _rank, String^ _password, String^ _email) {

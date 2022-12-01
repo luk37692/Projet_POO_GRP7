@@ -45,7 +45,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CLRSupport>true</CLRSupport>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -126,6 +126,9 @@
     <ClCompile Include="CLColor_discount.cpp" />
     <ClCompile Include="CLMean_of_payment.cpp" />
     <ClCompile Include="CLquantity_discount.cpp" />
+    <ClCompile Include="Ctrl_Customers.cpp" />
+    <ClCompile Include="Ctrl_Employee.cpp" />
+    <ClCompile Include="Ctrl_Orders.cpp" />
     <ClCompile Include="dbConnect.cpp" />
     <ClCompile Include="CLCity.cpp" />
     <ClCompile Include="CLOrders_line.cpp" />
@@ -143,6 +146,9 @@
     <ClInclude Include="CLColor_discount.h" />
     <ClInclude Include="CLMean_of_payment.h" />
     <ClInclude Include="CLquantity_discount.h" />
+    <ClInclude Include="Ctrl_Customers.h" />
+    <ClInclude Include="Ctrl_Employee.h" />
+    <ClInclude Include="Ctrl_Orders.h" />
     <ClInclude Include="dbConnect.h" />
     <ClInclude Include="CLCity.h" />
     <ClInclude Include="CLOrders_line.h" />

@@ -13,10 +13,10 @@ namespace NS_Models {
 		int getId_customer(void);
 		String^ getBirth_date(void);
 
-		virtual String^ Select(void) override;
-		virtual String^ Insert(void) override;
-		virtual String^ Update(void) override;
-		virtual String^ Delete(void) override;
+		virtual String^ SELECT(void) override;
+		virtual String^ INSERT(void) override;
+		virtual String^ UPDATE(void) override;
+		virtual String^ DELETE(void) override;
 	};
 
 }

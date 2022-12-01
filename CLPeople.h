@@ -9,10 +9,10 @@ namespace NS_Models {
 		String^ last_name;
 	public:
 		CLPeople();
-		virtual String^ Select(void) ;
-		virtual String^ Insert(void) ;
-		virtual String^ Update(void) ;
-		virtual String^ Delete(void) ;
+		virtual String^ SELECT(void) ;
+		virtual String^ INSERT(void) ;
+		virtual String^ UPDATE(void) ;
+		virtual String^ DELETE(void) ;
 		void setId(int);
 		void setFirst_name(String^);
 		void setLast_name(String^);

@@ -42,6 +42,6 @@ void NS_Models::Employee::setEmployeeEmail(String^ _email) {
 	this->email = _email;
 }
 
-String^ NS_Models::Employee::Insert(void) {
+String^ NS_Models::Employee::INSERT(void) {
 
 }
