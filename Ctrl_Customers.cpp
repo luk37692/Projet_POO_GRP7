@@ -13,7 +13,7 @@ namespace NS_Ctrl {
 		this->OB_customer->setLast_name(_nom);
 		this->OB_customer->setFirst_name(_prenom);
 		this->OB_customer->setCustomer_Birth_Date(_date_birth);
-		this->OB_connect->actionRows(this->OB_customer->INSERT())
+		this->OB_connect->actionRows(this->OB_customer->INSERT());
 	}
 
 	void Ctrl_Customers::UPDATE(int _id, String^ _nom, String^ _prenom, String^ _date_birth) {
@@ -21,12 +21,12 @@ namespace NS_Ctrl {
 		this->OB_customer->setLast_name(_nom);
 		this->OB_customer->setFirst_name(_prenom);
 		this->OB_customer->setCustomer_Birth_Date(_date_birth);
-		this->OB_customer->UPDATE();
+		this->OB_connect->actionRows(this->OB_customer->UPDATE());
 
 	}
 
 	void Ctrl_Customers::DELETE(int id) {
 		this->OB_customer->setId(id);
-		this->OB_customer->DELETE();
+		this->OB_connect->actionRows(this->OB_customer->DELETE());
 	}
 }	

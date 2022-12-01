@@ -31,12 +31,12 @@ namespace NS_Ctrl {
 		this->OB_empl->setEmployeeRank(_rank);
 		this->OB_empl->setEmployeePassword(_password);
 		this->OB_empl->setEmployeeEmail(_email);
-		this->OB_empl->UPDATE();
+		this->OB_connect->actionRows(this->OB_empl->UPDATE());
 	}
 
 	void Ctrl_Employee::DELETE(int _id) {
 		this->OB_empl->setId(_id);
-		this->OB_empl->DELETE();
+		this->OB_connect->actionRows(this->OB_empl->DELETE());
 	}
 
 }

@@ -25,10 +25,11 @@ namespace NS_Ctrl {
 		this->OB_Orders->setDelivery_date(_delivery_date);
 		this->OB_Orders->setTotal_price_df(_total_priceDF);
 		this->OB_Orders->setCustomer_id(CustId);
+		this->OB_connect->actionRows(this->OB_Orders->UPDATE());
 	}
 
 	void Ctrl_Orders::DELETE(int _id) {
 		this->OB_Orders->setId_order(_id);
-		this->OB_Orders->DELETE();
+		this->OB_connect->actionRows(this->OB_Orders->DELETE());
 	}
 }

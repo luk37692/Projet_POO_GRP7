@@ -21,10 +21,10 @@ namespace NS_Ctrl {
 		this->OB_Items->setType(type);
 		this->OB_Items->setName(name);
 		this->OB_Items->setPrice_df(pricedf);
-		this->OB_Items->UPDATE();
+		this->OB_connect->actionRows(this->OB_Items->UPDATE());
 	}
 	void Ctrl_Items::DELETE(int id) {
 		this->OB_Items->setId_items(id);
-		this->OB_Items->DELETE();
+		this->OB_connect->actionRows(this->OB_Items->DELETE());
 	}
 }
