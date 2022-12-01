@@ -45,7 +45,7 @@ namespace NS_Models
 		this->email = _email;
 	}
 
-	String^ CLEmployee::Insert(void) {
+	String^ CLEmployee::INSERT(void) {
 		return "feur";
 	}
 }

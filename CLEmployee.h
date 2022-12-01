@@ -23,10 +23,10 @@ namespace NS_Models {
 		String^ getRank(void);
 		String^ getPassword(void);
 		String^ getEmail(void);
-		virtual String^ Select(void) override;
-		virtual String^ Insert(void) override;
-		virtual String^ Update(void) override;
-		virtual String^ Delete(void) override;
+		virtual String^ SELECT(void) ;
+		virtual String^ INSERT(void) ;
+		virtual String^ UPDATE(void) ;
+		virtual String^ DELETE(void) ;
 
 	};
 }

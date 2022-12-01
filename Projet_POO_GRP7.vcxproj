@@ -177,6 +177,9 @@
     <EmbeddedResource Include="CustomerForm.resx">
       <DependentUpon>CustomerForm.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserLogin.resx">
+      <DependentUpon>UserLogin.h</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

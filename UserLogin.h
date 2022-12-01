@@ -102,7 +102,6 @@ namespace ProjetPOOGRP7 {
 			this->pswdTextBox->Name = L"pswdTextBox";
 			this->pswdTextBox->Size = System::Drawing::Size(274, 32);
 			this->pswdTextBox->TabIndex = 3;
-			this->pswdTextBox->Text = L"Pswd";
 			// 
 			// Login_button
 			// 
