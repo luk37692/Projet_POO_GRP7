@@ -12,9 +12,9 @@ namespace NS_Ctrl {
 	public:
 		Ctrl_Customers();
 		DataSet^ listCustomer(String^);
-		void ADD(String^, String^,String^);
-		void UPDATE(int, String^, String^, String^);
-		void DELETE(int);
+		void ADD(String^, String^, DateTime);
+		void UPDATE(String^, String^, DateTime);
+		void DELETE(String^, String^, DateTime);
 	};
 
 }

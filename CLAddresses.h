@@ -4,7 +4,7 @@
 #include"CLCity.h"
 
 namespace NS_Models {
-	ref class CLAddresses: public CLPeople
+	ref class CLAddresses : public CLPeople
 	{
 	private:
 		int id_address;
@@ -15,11 +15,23 @@ namespace NS_Models {
 		CLCity objet_city;
 	public:
 		CLAddresses();
+		void setStreet_name(String^ _sName);
+		void setStreet_data(String^ _sdata);
+		void setStreet_number(String^ _sNumber);
+		void setId_addresses(int _sID);
+		void setId_person(int _pID);
+		void setId_city(int _cID);
+		String^ getStreet_name(void);
+		String^ getStreet_number(void);
+		String^ getStreet_data(void);
+		int getId_addresses(void);
+		int getId_person(void);
+		int getId_city(void);
+		String^ SELECT(void) override;
+		String^ INSERT(void) override;
+		String^ UPDATE(void) override;
+		String^ DELETE(void) override;
 
-		virtual String^ SELECT(void) override;
-		virtual String^ INSERT(void) override;
-		virtual String^ UPDATE(void) override;
-		virtual String^ DELETE(void) override;
-
+	};
 
 }

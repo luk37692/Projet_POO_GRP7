@@ -1,7 +1,9 @@
 #pragma once
 #include "pch.h"
+#include "CLmaps.h"
+
 namespace NS_Models {
-	ref class CLItems
+	ref class CLItems:CLmaps
 	{
 	private:
 		int id_items;
@@ -23,10 +25,10 @@ namespace NS_Models {
 		String^ getType(void);
 		float getPrice_df(void);
 
-		virtual String^ SELECT(void) override;
-		virtual String^ INSERT(void)override;
-		virtual String^ UPDATE(void)override;
-		virtual String^ DELETE(void)override;
+		String^ SELECT(void)override;
+		String^ INSERT(void)override;
+		String^ UPDATE(void)override;
+		String^ DELETE(void)override;
 
 	};
 

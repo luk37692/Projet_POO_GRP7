@@ -1,6 +1,6 @@
 #include "CLItems.h"
 NS_Models::CLItems::CLItems() {
-	this->id_items = NULL;
+	this->id_items = 0;
 	this->items_reference = "default";
 	this->type = "default";
 	this->name = "default";
@@ -38,4 +38,21 @@ String^ NS_Models::CLItems::getType(void) {
 }
 float NS_Models::CLItems::getPrice_df(void) {
 	return this->price_df;
+}
+String^ NS_Models::CLItems::SELECT()
+{
+	return "feur";
+	}
+String^ NS_Models::CLItems::INSERT()
+{
+	return "feur";
+	}
+String^ NS_Models::CLItems::UPDATE()
+{
+	return "feur";
+
+	}
+String^ NS_Models::CLItems::DELETE()
+{
+	return "feur";
 }

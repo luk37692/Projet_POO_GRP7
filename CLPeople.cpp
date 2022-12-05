@@ -1,6 +1,6 @@
 #include "CLPeople.h"
 NS_Models::CLPeople::CLPeople() {
-	this->id = NULL;
+	this->id = 0;
 	this->first_name = "Default";
 	this->last_name = "Default";
 }
@@ -28,19 +28,19 @@ String^ NS_Models::CLPeople::getLast_name(void) {
 }
 
 
-String^ NS_Models::CLPeople::INSERT(void) {
-
-}
-
-String^ NS_Models::CLPeople::SELECT(void) {
-
-}
-
-String^ NS_Models::CLPeople::UPDATE(void) {
-
-}
-
-String^ NS_Models::CLPeople::DELETE(void) {
-
-}
+//String^ NS_Models::CLPeople::INSERT(void) {
+//	return "feur";
+//}
+//
+//String^ NS_Models::CLPeople::SELECT(void) {
+//	return "feur";
+//}
+//
+//String^ NS_Models::CLPeople::UPDATE(void) {
+//	return "feur";
+//}
+//
+//String^ NS_Models::CLPeople::DELETE(void) {
+//	return "feur";
+//}
 

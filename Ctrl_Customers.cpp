@@ -6,27 +6,40 @@ namespace NS_Ctrl {
 		this->OB_customer = gcnew NS_Models::Customer();
 	}
 	DataSet^ Ctrl_Customers::listCustomer(String^ sDataTableName) {
-		return this->ds = OB_connect->getRows(OB_customer->SELECT(), sDataTableName);
+		String^ sql;
+		sql = this->OB_customer->SELECT();
+		return this->ds = OB_connect->getRows(sql, sDataTableName);
 	}
 
-	void Ctrl_Customers::ADD(String^ _nom, String^ _prenom, String^_date_birth) {
+	void Ctrl_Customers::ADD(String^ _nom, String^ _prenom, DateTime _date_birth) {
 		this->OB_customer->setLast_name(_nom);
 		this->OB_customer->setFirst_name(_prenom);
 		this->OB_customer->setCustomer_Birth_Date(_date_birth);
 		this->OB_connect->actionRows(this->OB_customer->INSERT());
 	}
 
-	void Ctrl_Customers::UPDATE(int _id, String^ _nom, String^ _prenom, String^ _date_birth) {
-		this->OB_customer->setId(_id);
-		this->OB_customer->setLast_name(_nom);
-		this->OB_customer->setFirst_name(_prenom);
-		this->OB_customer->setCustomer_Birth_Date(_date_birth);
-		this->OB_connect->actionRows(this->OB_customer->UPDATE());
+	void Ctrl_Customers::UPDATE(String^ _nom, String^ _prenom, DateTime _date_birth) {
+		if (this->OB_customer->getId() == 0) {
+			this->ds = listCustomer("sDataTableName");
+		}
+		else {
+			this->OB_customer->setLast_name(_nom);
+			this->OB_customer->setFirst_name(_prenom);
+			this->OB_customer->setCustomer_Birth_Date(_date_birth);
+			this->OB_connect->actionRows(this->OB_customer->UPDATE());
+		}
 
 	}
 
-	void Ctrl_Customers::DELETE(int id) {
-		this->OB_customer->setId(id);
-		this->OB_connect->actionRows(this->OB_customer->DELETE());
-	}
-}	
+	void Ctrl_Customers::DELETE(String^ _nom, String^ _prenom, DateTime _date_birth) {
+		if (this->OB_customer->getId() == 0) {
+			this->ds = listCustomer("sDataTableName");
+		}
+		else {
+			this->OB_customer->setLast_name(_nom);
+			this->OB_customer->setFirst_name(_prenom);
+			this->OB_customer->setCustomer_Birth_Date(_date_birth);
+			this->OB_connect->actionRows(this->OB_customer->DELETE());
+		}
+	};
+}

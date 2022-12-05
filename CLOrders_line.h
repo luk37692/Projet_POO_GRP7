@@ -11,8 +11,8 @@ namespace NS_Models {
 	private:
 		int quantity_ordered;
 		CLOrders_line^ next;
-		CLItems obj_items;
-		CLColors obj_color;
+		CLItems^ obj_items;
+		CLColors^ obj_color;
 	public:
 		void setQuantity_ordered(int);
 		void setColor_id(int);

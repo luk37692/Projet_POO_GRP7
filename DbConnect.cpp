@@ -1,7 +1,7 @@
 #include "dbConnect.h"
 NS_Models::dbConnect::dbConnect(void)
 {
-	this->sCnx = "Data Source=LAPTOP-6RJGB3RI\\MSSQL_LUC;Initial Catalog=POO_GRP7;User ID=CNX;Password=cesi123";
+	this->sCnx = "Data Source=LAPTOP-16SKBVQI\\MSSQL_ROMAIN;Initial Catalog=POO_GRP7;Persist Security Info=True;User ID=CNX;Password=azerty";
 
 	this->sSql = "Rien";
 
@@ -10,7 +10,7 @@ NS_Models::dbConnect::dbConnect(void)
 	this->oDA = gcnew System::Data::SqlClient::SqlDataAdapter();
 	this->oDs = gcnew System::Data::DataSet();
 
-	this->oCmd->CommandType = System::Data::CommandType::Text;
+	this->oCmd->CommandType = System::Data::CommandType::StoredProcedure;
 }
 System::Data::DataSet^ NS_Models::dbConnect::getRows(System::String^ sSql, System::String^ sDataTableName)
 {

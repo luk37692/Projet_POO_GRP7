@@ -43,3 +43,21 @@ float NS_Models::CLOrders::getTotal_price(void) {
 float NS_Models::CLOrders::getTotal_price_df(void) {
 	return this->total_price_df;
 }
+
+String^ NS_Models::CLOrders::SELECT()
+{
+	return "feur";
+}
+String^ NS_Models::CLOrders::INSERT()
+{
+	return "feur";
+}
+String^ NS_Models::CLOrders::UPDATE()
+{
+	return "feur";
+
+}
+String^ NS_Models::CLOrders::DELETE()
+{
+	return "feur";
+}

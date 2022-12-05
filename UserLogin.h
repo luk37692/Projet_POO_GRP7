@@ -131,15 +131,17 @@ namespace ProjetPOOGRP7 {
 		}
 #pragma endregion
 	private: System::Void Login_button_Click(System::Object^ sender, System::EventArgs^ e) {
-		NS_Models::dbConnect();
+		//NS_Models::dbConnect();
 
-		String^ querry = "SELECT * FROM EMPLOYEES WHERE username = '" + email_textBox->Text + "' AND password = '" + pswdTextBox->Text + "'";
-		//this->Close();
+		//String^ querry = "SELECT * FROM EMPLOYEES WHERE username = '" + email_textBox->Text + "' AND password = '" + pswdTextBox->Text + "'";
+		
 		MyForm^ form2 = gcnew MyForm();
 		form2->Show();
+		//this->Close();
+		
 
 
 
 	}
 	};
-}
+};

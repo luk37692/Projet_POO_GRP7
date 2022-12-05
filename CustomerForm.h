@@ -103,7 +103,7 @@ namespace ProjetPOOGRP7 {
 				static_cast<System::Byte>(0)));
 			this->fname_label->Location = System::Drawing::Point(12, 116);
 			this->fname_label->Name = L"fname_label";
-			this->fname_label->Size = System::Drawing::Size(159, 48);
+			this->fname_label->Size = System::Drawing::Size(127, 38);
 			this->fname_label->TabIndex = 1;
 			this->fname_label->Text = L"prénom";
 			// 

@@ -2,7 +2,7 @@
 #include "pch.h"
 #include "CLItems.h"
 namespace NS_Models {
-	ref class CLquantity_discount : public CLItems
+	ref class CLquantity_discount: public CLItems
 	{
 	private:
 		int quantity_treshold;
