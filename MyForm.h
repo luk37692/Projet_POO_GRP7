@@ -1,5 +1,5 @@
-#pragma once
-
+ï»¿#pragma once
+#include "CustomerForm.h"
 namespace ProjetPOOGRP7 {
 
 	using namespace System;
@@ -10,7 +10,7 @@ namespace ProjetPOOGRP7 {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Description résumée de MyForm
+	/// Description rï¿½sumï¿½e de MyForm
 	/// </summary>
 	public ref class MyForm : public System::Windows::Forms::Form
 	{
@@ -25,7 +25,7 @@ namespace ProjetPOOGRP7 {
 
 	protected:
 		/// <summary>
-		/// Nettoyage des ressources utilisées.
+		/// Nettoyage des ressources utilisï¿½es.
 		/// </summary>
 		~MyForm()
 		{
@@ -34,26 +34,54 @@ namespace ProjetPOOGRP7 {
 				delete components;
 			}
 		}
+	private: System::Windows::Forms::Button^ Manage_Cust_button;
+	protected:
+
+	protected:
 
 	private:
 		/// <summary>
-		/// Variable nécessaire au concepteur.
+		/// Variable nï¿½cessaire au concepteur.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Méthode requise pour la prise en charge du concepteur - ne modifiez pas
-		/// le contenu de cette méthode avec l'éditeur de code.
+		/// Mï¿½thode requise pour la prise en charge du concepteur - ne modifiez pas
+		/// le contenu de cette mï¿½thode avec l'ï¿½diteur de code.
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->components = gcnew System::ComponentModel::Container();
-			this->Size = System::Drawing::Size(300,300);
-			this->Text = L"MyForm";
-			this->Padding = System::Windows::Forms::Padding(0);
+			this->Manage_Cust_button = (gcnew System::Windows::Forms::Button());
+			this->SuspendLayout();
+			// 
+			// Manage_Cust_button
+			// 
+			this->Manage_Cust_button->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->Manage_Cust_button->Location = System::Drawing::Point(37, 33);
+			this->Manage_Cust_button->Name = L"Manage_Cust_button";
+			this->Manage_Cust_button->Size = System::Drawing::Size(162, 519);
+			this->Manage_Cust_button->TabIndex = 0;
+			this->Manage_Cust_button->Text = L"Gestion Client";
+			this->Manage_Cust_button->UseVisualStyleBackColor = true;
+			this->Manage_Cust_button->Click += gcnew System::EventHandler(this, &MyForm::Manage_Cust_button_Click);
+			// 
+			// MyForm
+			// 
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->ClientSize = System::Drawing::Size(614, 572);
+			this->Controls->Add(this->Manage_Cust_button);
+			this->Name = L"MyForm";
+			this->Text = L"MyForm";
+			this->ResumeLayout(false);
+
 		}
 #pragma endregion
+	private: System::Void Manage_Cust_button_Click(System::Object^ sender, System::EventArgs^ e) {
+		CustomerForm^ addform = gcnew CustomerForm();
+		addform->ShowDialog();
+	}
 	};
 }

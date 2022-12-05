@@ -3,6 +3,7 @@ using namespace System;
 using namespace System::Windows::Forms;
 
 
+
 [STAThreadAttribute]
 int __clrcall WinMain(array<String^>^ args)
 {
@@ -10,4 +11,5 @@ int __clrcall WinMain(array<String^>^ args)
 	Application::SetCompatibleTextRenderingDefault(false);
 	ProjetPOOGRP7::MyForm monFormulaire;
 	Application::Run(% monFormulaire);
+
 }

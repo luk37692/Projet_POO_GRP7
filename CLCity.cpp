@@ -1,5 +1,6 @@
 #include "CLCity.h"
 
+
 NS_Models::CLCity::CLCity() {
 	this->id_city = 0;
 	this->name_city = "default";
@@ -23,4 +24,5 @@ int NS_Models::CLCity::getPostal_code(void) {
 }
 String^ NS_Models::CLCity::getName_city(void) {
 	return this->name_city;
+
 }

@@ -2,7 +2,9 @@
 #include "pch.h"
 #include "CLItems.h"
 namespace NS_Models {
+
 	ref class CLColors:public CLItems
+
 	{
 	protected:
 		int id_colors;
@@ -19,3 +21,4 @@ namespace NS_Models {
 		int getID_items(void);
 	};
 }
+

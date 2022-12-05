@@ -4,7 +4,9 @@
 #include "CLItems.h"
 #include "CLColors.h"
 namespace NS_Models {
+
 	 ref class CLOrders_line :public CLOrders
+
 	{
 	private:
 		int quantity_ordered;

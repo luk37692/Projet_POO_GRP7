@@ -12,7 +12,7 @@ namespace NS_Models {
 	public:
 		CLItems();
 		void setId_items(int);
-		
+
 		void setItems_reference(String^);
 		void setName(String^);
 		void setType(String^);
@@ -22,10 +22,12 @@ namespace NS_Models {
 		String^ getName(void);
 		String^ getType(void);
 		float getPrice_df(void);
+
 		virtual String^ SELECT(void) override;
 		virtual String^ INSERT(void)override;
 		virtual String^ UPDATE(void)override;
 		virtual String^ DELETE(void)override;
+
 	};
 
 }

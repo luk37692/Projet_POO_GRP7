@@ -3,11 +3,13 @@
 #include "CLOrders.h"
 #include "CLMean_of_payment.h"
 namespace NS_Models {
+
 	ref class CLMilestone_payments:  CLOrders
 	{
 	private:
 		String^ payment_date;
 		float price; 
+
 		CLMean_of_payment Obj_mean_of_pay;
 	public:
 		void setPayment_date(String^);
@@ -19,4 +21,6 @@ namespace NS_Models {
 		int getId_mean_of_payment(void);
 		int getID_order(void);
 	};
+
 }
+
