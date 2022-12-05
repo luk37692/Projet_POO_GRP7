@@ -1,6 +1,6 @@
 #pragma once
 
-namespace NS_Models{
+namespace NS_Models {
 	ref class dbConnect
 	{
 	private:

@@ -1,7 +1,9 @@
 #pragma once
 #include "pch.h"
+#include "CLMaps.h"
+
 namespace NS_Models {
-	ref class CLPeople
+	ref class CLPeople:CLMaps
 	{
 
 	protected :
@@ -12,18 +14,18 @@ namespace NS_Models {
 	public:
 		CLPeople();
 
-		virtual String^ SELECT(void) ;
-		virtual String^ INSERT(void) ;
-		virtual String^ UPDATE(void) ;
-		virtual String^ DELETE(void) ;
-
-		void setId(int);
-		void setFirst_name(String^);
-		void setLast_name(String^);
-		int getId(void);
-		String^ getFirst_name(void);
-		String^ getLast_name(void);
-	};
+		String^ SELECT(void) override;
+		String^ INSERT(void) override;
+		String^ UPDATE(void) override;
+		String^ DELETE(void) override;
+											  
+		void setId(int);					  
+		void setFirst_name(String^);	  
+		void setLast_name(String^);		  
+		int getId(void);					  
+		String^ getFirst_name(void);		  
+		String^ getLast_name(void);			  
+	};										  
 
 }
 

@@ -135,17 +135,20 @@
     <ClCompile Include="CLquantity_discount.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Ctrl_Employee.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
     <ClCompile Include="Ctrl_Customers.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers de Services</Filter>
     </ClCompile>
-    <ClCompile Include="Ctrl_Orders.cpp">
-      <Filter>Fichiers sources</Filter>
+    <ClCompile Include="Ctrl_Employee.cpp">
+      <Filter>Fichiers de Services</Filter>
     </ClCompile>
     <ClCompile Include="Ctrl_Items.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers de Services</Filter>
+    </ClCompile>
+    <ClCompile Include="Ctrl_Orders.cpp">
+      <Filter>Fichiers de Services</Filter>
+    </ClCompile>
+    <ClCompile Include="CLMaps.cpp">
+      <Filter>Fichiers de Services</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -185,16 +188,10 @@
     <ClInclude Include="CLPeople.h">
       <Filter>Fichiers de Mappage\Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="pch.h">
-      <Filter>Fichiers de Mappage\Fichiers d%27en-tête</Filter>
-    </ClInclude>
     <ClInclude Include="CLColor_discount.h">
       <Filter>Fichiers de Mappage\Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="CLQuantity_discount.h">
-      <Filter>Fichiers de Mappage\Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="DbConnect.h">
       <Filter>Fichiers de Mappage\Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="MyForm.h">
@@ -254,17 +251,26 @@
     <ClInclude Include="CLquantity_discount.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Ctrl_Employee.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
     <ClInclude Include="Ctrl_Customers.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers de Services\Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Ctrl_Orders.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+    <ClInclude Include="Ctrl_Employee.h">
+      <Filter>Fichiers de Services\Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="Ctrl_Items.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers de Services\Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctrl_Orders.h">
+      <Filter>Fichiers de Services\Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="CLMaps.h">
+      <Filter>Fichiers de Mappage\Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Fichiers de Mappage\Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="dbConnect.h">
+      <Filter>Fichiers de Mappage\Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

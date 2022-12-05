@@ -10,7 +10,7 @@ namespace NS_Models {
 		String^ payment_date;
 		float price; 
 
-		CLMean_of_payment Obj_mean_of_pay;
+		CLMean_of_payment^ Obj_mean_of_pay;
 	public:
 		void setPayment_date(String^);
 		void setPrice(float);

@@ -12,10 +12,10 @@ NS_Models::dbConnect::dbConnect(void)
 
 	this->oCmd->CommandType = System::Data::CommandType::StoredProcedure;
 }
-System::Data::DataSet^ NS_Models::dbConnect::getRows(System::String^ sSql, System::String^ sDataTableName)
+System::Data::DataSet^ NS_Models::dbConnect::getRows(System::String^ sqlRequest, System::String^ sDataTableName)
 {
 	this->oDs->Clear();
-	this->sSql = sSql;
+	this->sSql = sqlRequest;
 	this->oCmd->CommandText = this->sSql;
 	this->oDA->SelectCommand = this->oCmd;
 	this->oDA->Fill(this->oDs, sDataTableName);

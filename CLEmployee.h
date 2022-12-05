@@ -26,10 +26,10 @@ namespace NS_Models {
 		String^ getPassword(void);
 		String^ getEmail(void);
 
-		virtual String^ SELECT(void) override;
-		virtual String^ INSERT(void) override;
-		virtual String^ UPDATE(void) override;
-		virtual String^ DELETE(void) override;
+		 String^ SELECT(void) ;
+		 String^ INSERT(void) ;
+		 String^ UPDATE(void) ;
+		 String^ DELETE(void) ;
 
 
 	};

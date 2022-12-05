@@ -33,11 +33,11 @@ String^ NS_Models::CLPeople::INSERT(void) {
 }
 
 String^ NS_Models::CLPeople::SELECT(void) {
-
+	
 }
 
 String^ NS_Models::CLPeople::UPDATE(void) {
-
+	
 }
 
 String^ NS_Models::CLPeople::DELETE(void) {
