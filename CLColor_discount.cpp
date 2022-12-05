@@ -17,4 +17,5 @@ int NS_Models::CLColor_discount::getDiscount_multiplier(void) {
 }
 int NS_Models::CLColor_discount::getID__colors(void) {
 	return getId_colors();
+
 }

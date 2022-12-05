@@ -11,10 +11,12 @@ namespace NS_Models {
 		String^ getMean_of_payment(void);
 		void setId_mean_of_payment(int);
 		void setMean_of_payment(String^);
-		virtual String^ Select(void);
-		virtual String^ Insert(void);
-		virtual String^ Update(void);
-		virtual String^ Delete(void);
+
+		virtual String^ SELECT(void);
+		virtual String^ INSERT(void);
+		virtual String^ UPDATE(void);
+		virtual String^ DELETE(void);
+
 	};
 
 }

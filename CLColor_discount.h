@@ -2,7 +2,9 @@
 #include "pch.h"
 #include "CLColors.h"
 namespace NS_Models {
-	ref class CLColor_discount :public CLColors
+
+	ref class CLColor_discount:public CLColors
+
 	{
 	private:
 		int id_discount;

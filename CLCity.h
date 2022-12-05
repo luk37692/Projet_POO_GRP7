@@ -4,7 +4,8 @@
 namespace NS_Models {
 	ref class CLCity
 	{
-	private:
+	private :
+
 		int id_city;
 		String^ name_city;
 		int postal_code;
@@ -18,4 +19,6 @@ namespace NS_Models {
 		int getId_city(void);
 
 	};
-}
+
+} 
+

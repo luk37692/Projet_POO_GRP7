@@ -16,7 +16,9 @@ int NS_Models::CLMilestone_payments::getID_order(void) {
 	return getId_order();
 }
 String^ NS_Models::CLMilestone_payments::getpayment_date(void) {
-	return this->payment_date;
+
+	return this-> payment_date;
+
 }
 float NS_Models::CLMilestone_payments::getprice(void) {
 	return  this->price;

@@ -2,7 +2,9 @@
 #include "pch.h"
 #include "CLPeople.h"
 namespace NS_Models {
-	ref class CLEmployee :public CLPeople
+
+	ref class Employee:public CLPeople
+
 	{
 	private:
 		int upper_hierarchy_id;
@@ -23,10 +25,12 @@ namespace NS_Models {
 		String^ getRank(void);
 		String^ getPassword(void);
 		String^ getEmail(void);
-		virtual String^ SELECT(void) ;
-		virtual String^ INSERT(void) ;
-		virtual String^ UPDATE(void) ;
-		virtual String^ DELETE(void) ;
+
+		virtual String^ SELECT(void) override;
+		virtual String^ INSERT(void) override;
+		virtual String^ UPDATE(void) override;
+		virtual String^ DELETE(void) override;
+
 
 	};
 }

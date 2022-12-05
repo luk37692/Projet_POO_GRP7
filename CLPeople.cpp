@@ -27,18 +27,20 @@ String^ NS_Models::CLPeople::getLast_name(void) {
 	return this->last_name;
 }
 
-String^ NS_Models::CLPeople::Insert(void) {
-	return "feur";
+
+String^ NS_Models::CLPeople::INSERT(void) {
+
 }
 
-String^ NS_Models::CLPeople::Select(void) {
-	return "feur";
+String^ NS_Models::CLPeople::SELECT(void) {
+
 }
 
-String^ NS_Models::CLPeople::Update(void) {
-	return "feur";
+String^ NS_Models::CLPeople::UPDATE(void) {
+
 }
 
-String^ NS_Models::CLPeople::Delete(void) {
-	return "feur";
+String^ NS_Models::CLPeople::DELETE(void) {
+
 }
+
