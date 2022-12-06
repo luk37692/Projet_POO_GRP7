@@ -81,9 +81,6 @@
     <ClCompile Include="UserLogin.cpp">
       <Filter>Forms\Fichiers source</Filter>
     </ClCompile>
-    <ClCompile Include="CustomerForm.cpp">
-      <Filter>Forms\Fichiers source</Filter>
-    </ClCompile>
     <ClCompile Include="CustomerAddForm.cpp">
       <Filter>Forms\Fichiers source</Filter>
     </ClCompile>
@@ -200,9 +197,6 @@
     <ClInclude Include="DbConnect.h">
       <Filter>Fichiers de Mappage\Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="CustomerForm.h">
-      <Filter>Forms\Fichiers d%27en-tête</Filter>
-    </ClInclude>
     <ClInclude Include="CustomerAddForm.h">
       <Filter>Forms\Fichiers d%27en-tête</Filter>
     </ClInclude>
@@ -295,6 +289,12 @@
     </ClInclude>
     <ClInclude Include="Ctrl_Orders.h">
       <Filter>Fichiers de Services\Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="dbConnect.h">
+      <Filter>Fichiers de Mappage</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Fichiers de Mappage</Filter>
     </ClInclude>
     <ClInclude Include="dbConnect.h">
       <Filter>Fichiers de Mappage</Filter>

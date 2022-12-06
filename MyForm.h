@@ -1,7 +1,9 @@
 ﻿#pragma once
-#include "CustomerForm.h"
+#include "CustomerAddForm.h"
+#include "AddressAddForm.h"
 #include "dbConnect.h"
-#include "Ctrl_Customers.h"
+#include "Ctrl_Employee.h"
+#include "UserLogin.h"
 namespace ProjetPOOGRP7 {
 
 	using namespace System;
@@ -39,12 +41,13 @@ namespace ProjetPOOGRP7 {
 		}
 
 	private: System::Windows::Forms::TabControl^ Features_tab;
-		   NS_Ctrl::Ctrl_Customers oSvc;
-		   System::Data::DataSet^ oDs;
 		   int compteur = 0;
 		   System::String^ idSelected = "null";
 
-
+	private: NS_Ctrl::Ctrl_Employee^ oSvc;
+		   NS_Models::dbConnect^ cad;
+		   System::Data::DataSet^ oDs;
+	
 	protected:
 
 
@@ -113,6 +116,13 @@ namespace ProjetPOOGRP7 {
 	private: System::Windows::Forms::Button^ button15;
 	private: System::Windows::Forms::Splitter^ splitter4;
 	private: System::Windows::Forms::TabPage^ tabPage6;
+	private: System::Windows::Forms::TextBox^ textBox12;
+	private: System::Windows::Forms::Label^ label17;
+	private: System::Windows::Forms::TextBox^ textBox11;
+	private: System::Windows::Forms::Label^ label16;
+	private: System::Windows::Forms::TextBox^ textBox10;
+	private: System::Windows::Forms::Label^ label15;
+private: System::Windows::Forms::Button^ button1;
 
 
 
@@ -187,6 +197,12 @@ namespace ProjetPOOGRP7 {
 			this->button11 = (gcnew System::Windows::Forms::Button());
 			this->splitter3 = (gcnew System::Windows::Forms::Splitter());
 			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
+			this->textBox12 = (gcnew System::Windows::Forms::TextBox());
+			this->label17 = (gcnew System::Windows::Forms::Label());
+			this->textBox11 = (gcnew System::Windows::Forms::TextBox());
+			this->label16 = (gcnew System::Windows::Forms::Label());
+			this->textBox10 = (gcnew System::Windows::Forms::TextBox());
+			this->label15 = (gcnew System::Windows::Forms::Label());
 			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox8 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
@@ -199,7 +215,7 @@ namespace ProjetPOOGRP7 {
 			this->button14 = (gcnew System::Windows::Forms::Button());
 			this->button15 = (gcnew System::Windows::Forms::Button());
 			this->splitter4 = (gcnew System::Windows::Forms::Splitter());
-			this->tabPage5 = (gcnew System::Windows::Forms::TabPage());
+			this->tabPage4 = (gcnew System::Windows::Forms::TabPage());
 			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
@@ -212,8 +228,9 @@ namespace ProjetPOOGRP7 {
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->title_tab4 = (gcnew System::Windows::Forms::Label());
 			this->splitter2 = (gcnew System::Windows::Forms::Splitter());
-			this->tabPage4 = (gcnew System::Windows::Forms::TabPage());
+			this->tabPage5 = (gcnew System::Windows::Forms::TabPage());
 			this->tabPage6 = (gcnew System::Windows::Forms::TabPage());
+			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->Features_tab->SuspendLayout();
 			this->tabPage1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
@@ -236,6 +253,7 @@ namespace ProjetPOOGRP7 {
 			// 
 			// tabPage1
 			// 
+			this->tabPage1->Controls->Add(this->button1);
 			this->tabPage1->Controls->Add(this->dateTimePicker1);
 			this->tabPage1->Controls->Add(this->lname_text);
 			this->tabPage1->Controls->Add(this->fname_text);
@@ -430,6 +448,12 @@ namespace ProjetPOOGRP7 {
 			// 
 			// tabPage3
 			// 
+			this->tabPage3->Controls->Add(this->textBox12);
+			this->tabPage3->Controls->Add(this->label17);
+			this->tabPage3->Controls->Add(this->textBox11);
+			this->tabPage3->Controls->Add(this->label16);
+			this->tabPage3->Controls->Add(this->textBox10);
+			this->tabPage3->Controls->Add(this->label15);
 			this->tabPage3->Controls->Add(this->textBox7);
 			this->tabPage3->Controls->Add(this->textBox8);
 			this->tabPage3->Controls->Add(this->textBox9);
@@ -445,6 +469,36 @@ namespace ProjetPOOGRP7 {
 			resources->ApplyResources(this->tabPage3, L"tabPage3");
 			this->tabPage3->Name = L"tabPage3";
 			this->tabPage3->UseVisualStyleBackColor = true;
+			// 
+			// textBox12
+			// 
+			resources->ApplyResources(this->textBox12, L"textBox12");
+			this->textBox12->Name = L"textBox12";
+			// 
+			// label17
+			// 
+			resources->ApplyResources(this->label17, L"label17");
+			this->label17->Name = L"label17";
+			// 
+			// textBox11
+			// 
+			resources->ApplyResources(this->textBox11, L"textBox11");
+			this->textBox11->Name = L"textBox11";
+			// 
+			// label16
+			// 
+			resources->ApplyResources(this->label16, L"label16");
+			this->label16->Name = L"label16";
+			// 
+			// textBox10
+			// 
+			resources->ApplyResources(this->textBox10, L"textBox10");
+			this->textBox10->Name = L"textBox10";
+			// 
+			// label15
+			// 
+			resources->ApplyResources(this->label15, L"label15");
+			this->label15->Name = L"label15";
 			// 
 			// textBox7
 			// 
@@ -504,6 +558,7 @@ namespace ProjetPOOGRP7 {
 			resources->ApplyResources(this->button15, L"button15");
 			this->button15->Name = L"button15";
 			this->button15->UseVisualStyleBackColor = true;
+			this->button15->Click += gcnew System::EventHandler(this, &MyForm::button15_Click);
 			// 
 			// splitter4
 			// 
@@ -511,11 +566,23 @@ namespace ProjetPOOGRP7 {
 			this->splitter4->Name = L"splitter4";
 			this->splitter4->TabStop = false;
 			// 
-			// tabPage5
+			// tabPage4
 			// 
-			resources->ApplyResources(this->tabPage5, L"tabPage5");
-			this->tabPage5->Name = L"tabPage5";
-			this->tabPage5->UseVisualStyleBackColor = true;
+			this->tabPage4->Controls->Add(this->button4);
+			this->tabPage4->Controls->Add(this->button5);
+			this->tabPage4->Controls->Add(this->textBox1);
+			this->tabPage4->Controls->Add(this->button6);
+			this->tabPage4->Controls->Add(this->textBox2);
+			this->tabPage4->Controls->Add(this->button7);
+			this->tabPage4->Controls->Add(this->textBox3);
+			this->tabPage4->Controls->Add(this->label4);
+			this->tabPage4->Controls->Add(this->label6);
+			this->tabPage4->Controls->Add(this->label5);
+			this->tabPage4->Controls->Add(this->title_tab4);
+			this->tabPage4->Controls->Add(this->splitter2);
+			resources->ApplyResources(this->tabPage4, L"tabPage4");
+			this->tabPage4->Name = L"tabPage4";
+			this->tabPage4->UseVisualStyleBackColor = true;
 			// 
 			// button4
 			// 
@@ -582,29 +649,24 @@ namespace ProjetPOOGRP7 {
 			this->splitter2->Name = L"splitter2";
 			this->splitter2->TabStop = false;
 			// 
-			// tabPage4
+			// tabPage5
 			// 
-			this->tabPage4->Controls->Add(this->button4);
-			this->tabPage4->Controls->Add(this->button5);
-			this->tabPage4->Controls->Add(this->textBox1);
-			this->tabPage4->Controls->Add(this->button6);
-			this->tabPage4->Controls->Add(this->textBox2);
-			this->tabPage4->Controls->Add(this->button7);
-			this->tabPage4->Controls->Add(this->textBox3);
-			this->tabPage4->Controls->Add(this->label4);
-			this->tabPage4->Controls->Add(this->label6);
-			this->tabPage4->Controls->Add(this->label5);
-			this->tabPage4->Controls->Add(this->title_tab4);
-			this->tabPage4->Controls->Add(this->splitter2);
-			resources->ApplyResources(this->tabPage4, L"tabPage4");
-			this->tabPage4->Name = L"tabPage4";
-			this->tabPage4->UseVisualStyleBackColor = true;
+			resources->ApplyResources(this->tabPage5, L"tabPage5");
+			this->tabPage5->Name = L"tabPage5";
+			this->tabPage5->UseVisualStyleBackColor = true;
 			// 
 			// tabPage6
 			// 
 			resources->ApplyResources(this->tabPage6, L"tabPage6");
 			this->tabPage6->Name = L"tabPage6";
 			this->tabPage6->UseVisualStyleBackColor = true;
+			// 
+			// button1
+			// 
+			resources->ApplyResources(this->button1, L"button1");
+			this->button1->Name = L"button1";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
 			// 
 			// MyForm
 			// 
@@ -613,6 +675,7 @@ namespace ProjetPOOGRP7 {
 			this->BackColor = System::Drawing::Color::Gainsboro;
 			this->Controls->Add(this->Features_tab);
 			this->Name = L"MyForm";
+			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			this->Features_tab->ResumeLayout(false);
 			this->tabPage1->ResumeLayout(false);
 			this->tabPage1->PerformLayout();
@@ -627,6 +690,17 @@ namespace ProjetPOOGRP7 {
 
 		}
 #pragma endregion
+
+private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e)
+{
+	this->oSvc = gcnew NS_Ctrl::Ctrl_Employee();
+	UserLogin^ Form = gcnew UserLogin;
+	Form->ShowDialog();
+	if (!(Form->DialogResult == System::Windows::Forms::DialogResult::OK))
+	{
+		this->Close();
+	}
+}
 
 private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 	//String^ rec1;
@@ -648,7 +722,7 @@ private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e
 }
 private: System::Void add_employee_button_Click(System::Object^ sender, System::EventArgs^ e) {
 	CustomerAddForm^ AddCust = gcnew CustomerAddForm;
-	AddCust->Show();
+	AddCust->ShowDialog();
 
 }
 private: System::Void updateCust_button_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -664,6 +738,12 @@ private: System::Void deleteCust_button_Click(System::Object^ sender, System::Ev
 	NS_Ctrl::Ctrl_Customers^ OB_Ctrl_customer = gcnew NS_Ctrl::Ctrl_Customers();
 	this->dataGridView1->Refresh();
 	OB_Ctrl_customer->DELETE(fname_text->Text, lname_text->Text, dateTimePicker1->Value);
+}
+private: System::Void button15_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	AddressAddForm^ AddressForm = gcnew AddressAddForm();
+	AddressForm->ShowDialog();
 }
 };
 }

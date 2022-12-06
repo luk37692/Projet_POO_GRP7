@@ -25,6 +25,7 @@ namespace NS_Models {
 		String^ getRank(void);
 		String^ getPassword(void);
 		String^ getEmail(void);
+		String^ selectCon(String^ email, String^ password);
 
 		virtual String^ SELECT(void) override;
 		virtual String^ INSERT(void) override;

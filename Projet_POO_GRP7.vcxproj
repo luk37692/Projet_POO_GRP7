@@ -140,7 +140,6 @@
     <ClCompile Include="CLItems.cpp" />
     <ClCompile Include="CLMilestone_payments.cpp" />
     <ClCompile Include="CustomerAddForm.cpp" />
-    <ClCompile Include="CustomerForm.cpp" />
     <ClCompile Include="CLOrders.cpp" />
     <ClCompile Include="CLPeople.cpp" />
     <ClCompile Include="MyForm.cpp" />
@@ -157,9 +156,6 @@
     <ClInclude Include="CLMean_of_payment.h" />
     <ClInclude Include="CLquantity_discount.h" />
     <ClInclude Include="CustomerAddForm.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="CustomerForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="DbConnect.h" />
@@ -188,9 +184,6 @@
   <ItemGroup>
     <EmbeddedResource Include="CustomerAddForm.resx">
       <DependentUpon>CustomerAddForm.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CustomerForm.resx">
-      <DependentUpon>CustomerForm.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyForm.fr.resx">
       <DependentUpon>MyForm.h</DependentUpon>

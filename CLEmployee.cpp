@@ -43,6 +43,11 @@ void NS_Models::Employee::setEmployeeEmail(String^ _email) {
 	this->email = _email;
 }
 
+String^ NS_Models::Employee::selectCon(String^ email, String^ password)
+{
+	return "SELECT email FROM EMPLOYEES WHERE email ='"+ email + "' and password = '"+ password+"'";
+}
+
 String^ NS_Models::Employee::SELECT()
 {
 	return "feur";

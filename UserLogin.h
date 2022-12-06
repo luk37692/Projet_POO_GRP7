@@ -1,6 +1,8 @@
 #pragma once
 #include "DbConnect.h"
-#include "MyForm.h"
+
+#include "Ctrl_Employee.h"
+
 namespace ProjetPOOGRP7 {
 
 	using namespace System;
@@ -35,12 +37,16 @@ namespace ProjetPOOGRP7 {
 				delete components;
 			}
 		}
+	private: NS_Ctrl::Ctrl_Employee^ oSvc;
+		   NS_Models::dbConnect^ cad;
+		   System::Data::DataSet^ oDs;
 	private: System::Windows::Forms::Label^ email_label;
 	protected:
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::TextBox^ email_textBox;
 	private: System::Windows::Forms::TextBox^ pswdTextBox;
 	private: System::Windows::Forms::Button^ Login_button;
+	private: System::Windows::Forms::Label^ label2;
 
 
 	private:
@@ -61,6 +67,7 @@ namespace ProjetPOOGRP7 {
 			this->email_textBox = (gcnew System::Windows::Forms::TextBox());
 			this->pswdTextBox = (gcnew System::Windows::Forms::TextBox());
 			this->Login_button = (gcnew System::Windows::Forms::Button());
+			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// email_label
@@ -105,7 +112,7 @@ namespace ProjetPOOGRP7 {
 			// 
 			// Login_button
 			// 
-			this->Login_button->Location = System::Drawing::Point(12, 122);
+			this->Login_button->Location = System::Drawing::Point(12, 149);
 			this->Login_button->Name = L"Login_button";
 			this->Login_button->Size = System::Drawing::Size(491, 59);
 			this->Login_button->TabIndex = 4;
@@ -113,11 +120,24 @@ namespace ProjetPOOGRP7 {
 			this->Login_button->UseVisualStyleBackColor = true;
 			this->Login_button->Click += gcnew System::EventHandler(this, &UserLogin::Login_button_Click);
 			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Verdana", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label2->ForeColor = System::Drawing::Color::Red;
+			this->label2->Location = System::Drawing::Point(85, 126);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(0, 20);
+			this->label2->TabIndex = 5;
+			this->label2->Visible = false;
+			// 
 			// UserLogin
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(515, 193);
+			this->ClientSize = System::Drawing::Size(515, 220);
+			this->Controls->Add(this->label2);
 			this->Controls->Add(this->Login_button);
 			this->Controls->Add(this->pswdTextBox);
 			this->Controls->Add(this->email_textBox);
@@ -131,17 +151,25 @@ namespace ProjetPOOGRP7 {
 		}
 #pragma endregion
 	private: System::Void Login_button_Click(System::Object^ sender, System::EventArgs^ e) {
-		//NS_Models::dbConnect();
+		//this->oDs = this->oSvc->selectConnection("rsl", this->email_textBox->Text, this->pswdTextBox->Text);
+		//if (this->oDs->Tables["rsl"]->Rows->Count == 0)
+		//{
+		//	this->label2->Text = "L'identifiant et/ou le mot de passe est incorrect.";
+		//	this->pswdTextBox->Clear();
+		//}
+		//else
+		//{
+			this->DialogResult = System::Windows::Forms::DialogResult::OK;
+			this->Close();
+		//}
 
-		//String^ querry = "SELECT * FROM EMPLOYEES WHERE username = '" + email_textBox->Text + "' AND password = '" + pswdTextBox->Text + "'";
 		
-		MyForm^ form2 = gcnew MyForm();
-		form2->Show();
-		//this->Close();
 		
-
 
 
 	}
+
+
+
 	};
 };

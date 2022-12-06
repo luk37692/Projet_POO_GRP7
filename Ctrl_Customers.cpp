@@ -11,6 +11,7 @@ namespace NS_Ctrl {
 		return this->ds = OB_connect->getRows(sql, sDataTableName);
 	}
 
+
 	void Ctrl_Customers::ADD(String^ _nom, String^ _prenom, DateTime _date_birth) {
 		this->OB_customer->setLast_name(_nom);
 		this->OB_customer->setFirst_name(_prenom);
