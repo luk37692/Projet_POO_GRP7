@@ -61,18 +61,23 @@ namespace ProjetPOOGRP7 {
 
 	private: System::Windows::Forms::TabPage^ tabPage1;
 	private: System::Windows::Forms::TabPage^ tabPage4;
+	public: System::Windows::Forms::DateTimePicker^ dateTimePicker1;
+	private:
+	public: System::Windows::Forms::TextBox^ lname_text;
+	public: System::Windows::Forms::TextBox^ fname_text;
+	public: System::Windows::Forms::TextBox^ id_text;
 
-	private: System::Windows::Forms::DateTimePicker^ dateTimePicker1;
 
-	private: System::Windows::Forms::TextBox^ lname_text;
-	private: System::Windows::Forms::TextBox^ fname_text;
-	private: System::Windows::Forms::TextBox^ id_text;
+
+
+
+
 	private: System::Windows::Forms::Button^ searchCust_button;
 
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label1;
-	private: System::Windows::Forms::DataGridView^ dataGridView1;
+
 	private: System::Windows::Forms::Button^ deleteCust_button;
 
 	private: System::Windows::Forms::Button^ updateCust_button;
@@ -135,6 +140,8 @@ private: System::Windows::Forms::TextBox^ priceItem_text;
 
 
 	private: System::Windows::Forms::Label^ label15;
+	private: System::Windows::Forms::Button^ AddressManagment;
+
 private: System::Windows::Forms::Button^ button1;
 private: System::Windows::Forms::TextBox^ quantityItem_text;
 
@@ -161,6 +168,19 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column3;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column4;
 private: System::Windows::Forms::DataGridViewImageColumn^ Edit;
 private: System::Windows::Forms::DataGridViewImageColumn^ Delete;
+private: System::Windows::Forms::DataGridView^ dataGridView1;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn1;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn2;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn3;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn4;
+private: System::Windows::Forms::DataGridViewImageColumn^ dataGridViewImageColumn1;
+private: System::Windows::Forms::DataGridViewImageColumn^ dataGridViewImageColumn2;
+
+
+
+
+
+
 
 
 
@@ -288,11 +308,20 @@ private: System::Windows::Forms::DataGridViewImageColumn^ Delete;
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle3 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle4 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->Features_tab = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
+			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
+			this->dataGridViewTextBoxColumn1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->dataGridViewTextBoxColumn2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->dataGridViewTextBoxColumn3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->dataGridViewTextBoxColumn4 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->dataGridViewImageColumn1 = (gcnew System::Windows::Forms::DataGridViewImageColumn());
+			this->dataGridViewImageColumn2 = (gcnew System::Windows::Forms::DataGridViewImageColumn());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->dateTimePicker1 = (gcnew System::Windows::Forms::DateTimePicker());
 			this->lname_text = (gcnew System::Windows::Forms::TextBox());
@@ -302,7 +331,6 @@ private: System::Windows::Forms::DataGridViewImageColumn^ Delete;
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 			this->deleteCust_button = (gcnew System::Windows::Forms::Button());
 			this->updateCust_button = (gcnew System::Windows::Forms::Button());
 			this->addCust_button = (gcnew System::Windows::Forms::Button());
@@ -324,6 +352,15 @@ private: System::Windows::Forms::DataGridViewImageColumn^ Delete;
 			this->splitter3 = (gcnew System::Windows::Forms::Splitter());
 			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
 			this->dgvProduct = (gcnew System::Windows::Forms::DataGridView());
+			this->Column1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column7 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Type = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column6 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column4 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Edit = (gcnew System::Windows::Forms::DataGridViewImageColumn());
+			this->Delete = (gcnew System::Windows::Forms::DataGridViewImageColumn());
 			this->quantityItem_text = (gcnew System::Windows::Forms::TextBox());
 			this->label16 = (gcnew System::Windows::Forms::Label());
 			this->colorItem_text = (gcnew System::Windows::Forms::TextBox());
@@ -357,15 +394,6 @@ private: System::Windows::Forms::DataGridViewImageColumn^ Delete;
 			this->splitter2 = (gcnew System::Windows::Forms::Splitter());
 			this->tabPage5 = (gcnew System::Windows::Forms::TabPage());
 			this->tabPage6 = (gcnew System::Windows::Forms::TabPage());
-			this->Column1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column7 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Type = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column6 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column4 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Edit = (gcnew System::Windows::Forms::DataGridViewImageColumn());
-			this->Delete = (gcnew System::Windows::Forms::DataGridViewImageColumn());
 			this->Features_tab->SuspendLayout();
 			this->tabPage1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
@@ -389,6 +417,7 @@ private: System::Windows::Forms::DataGridViewImageColumn^ Delete;
 			// 
 			// tabPage1
 			// 
+			this->tabPage1->Controls->Add(this->dataGridView1);
 			this->tabPage1->Controls->Add(this->button1);
 			this->tabPage1->Controls->Add(this->dateTimePicker1);
 			this->tabPage1->Controls->Add(this->lname_text);
@@ -398,7 +427,6 @@ private: System::Windows::Forms::DataGridViewImageColumn^ Delete;
 			this->tabPage1->Controls->Add(this->label3);
 			this->tabPage1->Controls->Add(this->label2);
 			this->tabPage1->Controls->Add(this->label1);
-			this->tabPage1->Controls->Add(this->dataGridView1);
 			this->tabPage1->Controls->Add(this->deleteCust_button);
 			this->tabPage1->Controls->Add(this->updateCust_button);
 			this->tabPage1->Controls->Add(this->addCust_button);
@@ -408,6 +436,79 @@ private: System::Windows::Forms::DataGridViewImageColumn^ Delete;
 			resources->ApplyResources(this->tabPage1, L"tabPage1");
 			this->tabPage1->Name = L"tabPage1";
 			this->tabPage1->UseVisualStyleBackColor = true;
+			// 
+			// dataGridView1
+			// 
+			this->dataGridView1->AllowUserToAddRows = false;
+			this->dataGridView1->BackgroundColor = System::Drawing::Color::White;
+			this->dataGridView1->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
+			dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(70)),
+				static_cast<System::Int32>(static_cast<System::Byte>(160)));
+			dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			dataGridViewCellStyle1->ForeColor = System::Drawing::Color::White;
+			dataGridViewCellStyle1->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle1->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->dataGridView1->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+			resources->ApplyResources(this->dataGridView1, L"dataGridView1");
+			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::DisableResizing;
+			this->dataGridView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(6) {
+				this->dataGridViewTextBoxColumn1,
+					this->dataGridViewTextBoxColumn2, this->dataGridViewTextBoxColumn3, this->dataGridViewTextBoxColumn4, this->dataGridViewImageColumn1,
+					this->dataGridViewImageColumn2
+			});
+			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle2->BackColor = System::Drawing::SystemColors::Window;
+			dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			dataGridViewCellStyle2->ForeColor = System::Drawing::Color::Black;
+			dataGridViewCellStyle2->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			this->dataGridView1->DefaultCellStyle = dataGridViewCellStyle2;
+			this->dataGridView1->EnableHeadersVisualStyles = false;
+			this->dataGridView1->Name = L"dataGridView1";
+			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::dataGridView1_CellContentClick_1);
+			// 
+			// dataGridViewTextBoxColumn1
+			// 
+			this->dataGridViewTextBoxColumn1->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
+			resources->ApplyResources(this->dataGridViewTextBoxColumn1, L"dataGridViewTextBoxColumn1");
+			this->dataGridViewTextBoxColumn1->Name = L"dataGridViewTextBoxColumn1";
+			// 
+			// dataGridViewTextBoxColumn2
+			// 
+			this->dataGridViewTextBoxColumn2->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
+			resources->ApplyResources(this->dataGridViewTextBoxColumn2, L"dataGridViewTextBoxColumn2");
+			this->dataGridViewTextBoxColumn2->Name = L"dataGridViewTextBoxColumn2";
+			// 
+			// dataGridViewTextBoxColumn3
+			// 
+			this->dataGridViewTextBoxColumn3->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
+			resources->ApplyResources(this->dataGridViewTextBoxColumn3, L"dataGridViewTextBoxColumn3");
+			this->dataGridViewTextBoxColumn3->Name = L"dataGridViewTextBoxColumn3";
+			// 
+			// dataGridViewTextBoxColumn4
+			// 
+			this->dataGridViewTextBoxColumn4->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
+			resources->ApplyResources(this->dataGridViewTextBoxColumn4, L"dataGridViewTextBoxColumn4");
+			this->dataGridViewTextBoxColumn4->Name = L"dataGridViewTextBoxColumn4";
+			// 
+			// dataGridViewImageColumn1
+			// 
+			this->dataGridViewImageColumn1->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
+			resources->ApplyResources(this->dataGridViewImageColumn1, L"dataGridViewImageColumn1");
+			this->dataGridViewImageColumn1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"dataGridViewImageColumn1.Image")));
+			this->dataGridViewImageColumn1->Name = L"dataGridViewImageColumn1";
+			// 
+			// dataGridViewImageColumn2
+			// 
+			this->dataGridViewImageColumn2->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
+			resources->ApplyResources(this->dataGridViewImageColumn2, L"dataGridViewImageColumn2");
+			this->dataGridViewImageColumn2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"dataGridViewImageColumn2.Image")));
+			this->dataGridViewImageColumn2->Name = L"dataGridViewImageColumn2";
 			// 
 			// button1
 			// 
@@ -460,13 +561,6 @@ private: System::Windows::Forms::DataGridViewImageColumn^ Delete;
 			// 
 			resources->ApplyResources(this->label1, L"label1");
 			this->label1->Name = L"label1";
-			// 
-			// dataGridView1
-			// 
-			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			resources->ApplyResources(this->dataGridView1, L"dataGridView1");
-			this->dataGridView1->Name = L"dataGridView1";
-			this->dataGridView1->RowTemplate->Height = 24;
 			// 
 			// deleteCust_button
 			// 
@@ -619,34 +713,87 @@ private: System::Windows::Forms::DataGridViewImageColumn^ Delete;
 			this->dgvProduct->AllowUserToAddRows = false;
 			this->dgvProduct->BackgroundColor = System::Drawing::Color::White;
 			this->dgvProduct->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
-			dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(70)),
+			dataGridViewCellStyle3->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(70)),
 				static_cast<System::Int32>(static_cast<System::Byte>(160)));
-			dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			dataGridViewCellStyle3->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			dataGridViewCellStyle1->ForeColor = System::Drawing::Color::White;
-			dataGridViewCellStyle1->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle1->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->dgvProduct->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+			dataGridViewCellStyle3->ForeColor = System::Drawing::Color::White;
+			dataGridViewCellStyle3->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle3->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle3->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->dgvProduct->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
 			resources->ApplyResources(this->dgvProduct, L"dgvProduct");
 			this->dgvProduct->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::DisableResizing;
 			this->dgvProduct->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(9) {
 				this->Column1, this->Column7,
 					this->Column2, this->Type, this->Column6, this->Column3, this->Column4, this->Edit, this->Delete
 			});
-			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle2->BackColor = System::Drawing::SystemColors::Window;
-			dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			dataGridViewCellStyle4->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle4->BackColor = System::Drawing::SystemColors::Window;
+			dataGridViewCellStyle4->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			dataGridViewCellStyle2->ForeColor = System::Drawing::Color::Black;
-			dataGridViewCellStyle2->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			this->dgvProduct->DefaultCellStyle = dataGridViewCellStyle2;
+			dataGridViewCellStyle4->ForeColor = System::Drawing::Color::Black;
+			dataGridViewCellStyle4->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle4->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle4->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			this->dgvProduct->DefaultCellStyle = dataGridViewCellStyle4;
 			this->dgvProduct->EnableHeadersVisualStyles = false;
 			this->dgvProduct->Name = L"dgvProduct";
 			this->dgvProduct->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::dgvProduct_CellContentClick);
+			// 
+			// Column1
+			// 
+			resources->ApplyResources(this->Column1, L"Column1");
+			this->Column1->Name = L"Column1";
+			// 
+			// Column7
+			// 
+			resources->ApplyResources(this->Column7, L"Column7");
+			this->Column7->Name = L"Column7";
+			// 
+			// Column2
+			// 
+			this->Column2->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
+			resources->ApplyResources(this->Column2, L"Column2");
+			this->Column2->Name = L"Column2";
+			// 
+			// Type
+			// 
+			resources->ApplyResources(this->Type, L"Type");
+			this->Type->Name = L"Type";
+			// 
+			// Column6
+			// 
+			this->Column6->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
+			resources->ApplyResources(this->Column6, L"Column6");
+			this->Column6->Name = L"Column6";
+			// 
+			// Column3
+			// 
+			this->Column3->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
+			resources->ApplyResources(this->Column3, L"Column3");
+			this->Column3->Name = L"Column3";
+			// 
+			// Column4
+			// 
+			this->Column4->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
+			resources->ApplyResources(this->Column4, L"Column4");
+			this->Column4->Name = L"Column4";
+			// 
+			// Edit
+			// 
+			this->Edit->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
+			resources->ApplyResources(this->Edit, L"Edit");
+			this->Edit->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Edit.Image")));
+			this->Edit->Name = L"Edit";
+			// 
+			// Delete
+			// 
+			this->Delete->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
+			resources->ApplyResources(this->Delete, L"Delete");
+			this->Delete->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Delete.Image")));
+			this->Delete->Name = L"Delete";
 			// 
 			// quantityItem_text
 			// 
@@ -840,59 +987,6 @@ private: System::Windows::Forms::DataGridViewImageColumn^ Delete;
 			this->tabPage6->Name = L"tabPage6";
 			this->tabPage6->UseVisualStyleBackColor = true;
 			// 
-			// Column1
-			// 
-			resources->ApplyResources(this->Column1, L"Column1");
-			this->Column1->Name = L"Column1";
-			// 
-			// Column7
-			// 
-			resources->ApplyResources(this->Column7, L"Column7");
-			this->Column7->Name = L"Column7";
-			// 
-			// Column2
-			// 
-			this->Column2->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
-			resources->ApplyResources(this->Column2, L"Column2");
-			this->Column2->Name = L"Column2";
-			// 
-			// Type
-			// 
-			resources->ApplyResources(this->Type, L"Type");
-			this->Type->Name = L"Type";
-			// 
-			// Column6
-			// 
-			this->Column6->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
-			resources->ApplyResources(this->Column6, L"Column6");
-			this->Column6->Name = L"Column6";
-			// 
-			// Column3
-			// 
-			this->Column3->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
-			resources->ApplyResources(this->Column3, L"Column3");
-			this->Column3->Name = L"Column3";
-			// 
-			// Column4
-			// 
-			this->Column4->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
-			resources->ApplyResources(this->Column4, L"Column4");
-			this->Column4->Name = L"Column4";
-			// 
-			// Edit
-			// 
-			this->Edit->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
-			resources->ApplyResources(this->Edit, L"Edit");
-			this->Edit->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Edit.Image")));
-			this->Edit->Name = L"Edit";
-			// 
-			// Delete
-			// 
-			this->Delete->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
-			resources->ApplyResources(this->Delete, L"Delete");
-			this->Delete->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Delete.Image")));
-			this->Delete->Name = L"Delete";
-			// 
 			// MyForm
 			// 
 			resources->ApplyResources(this, L"$this");
@@ -928,35 +1022,37 @@ private: System::Windows::Forms::DataGridViewImageColumn^ Delete;
 			this->Close();
 		}
 		LoadItem();
+		LoadCustomer();
 	}
 	
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 		NS_Ctrl::Ctrl_Customers^ OB_Ctrl_customer = gcnew NS_Ctrl::Ctrl_Customers();
 		this->dataGridView1->Refresh();
-		this->oDs = OB_Ctrl_customer->listCustomer("RESULT");
+		this->oDs = OB_Ctrl_customer->listCustomer(fname_text->Text, lname_text->Text);
 		this->dataGridView1->DataSource = this->oDs;
-		this->dataGridView1->DataMember = "Clients";
+		//this->dataGridView1->DataMember = "Clients";
 	}
 	private: System::Void add_employee_button_Click(System::Object^ sender, System::EventArgs^ e) {
 		NS_Ctrl::Ctrl_Customers^ OB_Ctrl_customer = gcnew NS_Ctrl::Ctrl_Customers();
-		this->dataGridView1->Refresh();
-		OB_Ctrl_customer->ADD(fname_text->Text, lname_text->Text, dateTimePicker1->Value);
+		//
+		OB_Ctrl_customer->ADD(lname_text->Text,fname_text->Text, dateTimePicker1->Value);
+		MessageBox::Show("Client enregistré avec succès.");
+		LoadCustomer();
 	}
 	
 	
 	private: System::Void updateCust_button_Click(System::Object^ sender, System::EventArgs^ e) {
 		NS_Ctrl::Ctrl_Customers^ OB_Ctrl_customer = gcnew NS_Ctrl::Ctrl_Customers();
 		this->dataGridView1->Refresh();
-		//OB_Ctrl_customer->UPDATE(fname_text->Text, lname_text->Text, dateTimePicker1->Value, 0);
-		//this->dataGridView1->DataSource = OB_Ctrl_customer->getDataSet();
-		this->dataGridView1->DataMember = "Clients";
-	
+		OB_Ctrl_customer->UPDATE(fname_text->Text, lname_text->Text, dateTimePicker1->Value, 0);
+		this->dataGridView1->DataSource = OB_Ctrl_customer->getDataSet();
+		//this->dataGridView1->DataMember = "Clients";
 	
 	}
 	private: System::Void deleteCust_button_Click(System::Object^ sender, System::EventArgs^ e) {
 		NS_Ctrl::Ctrl_Customers^ OB_Ctrl_customer = gcnew NS_Ctrl::Ctrl_Customers();
 		this->dataGridView1->Refresh();
-		OB_Ctrl_customer->DELETE(fname_text->Text, lname_text->Text, dateTimePicker1->Value);
+		OB_Ctrl_customer->DELETE(customer_id);
 	}
 
 
@@ -969,8 +1065,9 @@ private: System::Windows::Forms::DataGridViewImageColumn^ Delete;
 		LoadItem();
 	}
 //
-	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void AddressManagment_Click(System::Object^ sender, System::EventArgs^ e) {
 		AddressAddForm^ AddressForm = gcnew AddressAddForm();
+		AddressForm->getCustomer(customer_id);
 		AddressForm->ShowDialog();
 	}
 //
@@ -1037,6 +1134,28 @@ private: Void LoadItem()
 		dr->Close();
 		con->Close();
 	}
+
+private: Void LoadCustomer()
+{
+
+	int i = 0;
+	dataGridView1->Rows->Clear();
+	cm = gcnew SqlCommand("SELECT * FROM CUSTOMERS JOIN PEOPLE ON CUSTOMERS.person_id = PEOPLE.id", con);
+	con->Open();
+	dr = cm->ExecuteReader();
+	while (dr->Read())
+	{
+		i++;
+		dataGridView1->Rows->Add(i, dr[4]->ToString(), dr[3]->ToString(), dr[1]->ToString());
+	}
+	dr->Close();
+	con->Close();
+}
+	   private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		   AddressAddForm^ AddressForm = gcnew AddressAddForm();
+		   AddressForm->getCustomer(customer_id);
+		   AddressForm->Show();
+	   }
 //private: System::Void updateItem_button_Click(System::Object^ sender, System::EventArgs^ e) {
 //	
 //	try
@@ -1054,5 +1173,30 @@ private: Void LoadItem()
 //		   OB_Ctrl_item->ADD(refitem_text->Text, typeItem_text->Text, nameItem_text->Text, colorItem_text->Text, Convert::ToDouble(priceItem_text->Text), Convert::ToInt32(quantityItem_text->Text));
 //		   MessageBox::Show("Produit enregistré avec succès.");
 //		   LoadItem();
+private: System::Void dataGridView1_CellContentClick_1(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+
+	String^ colName = dataGridView1->Columns[e->ColumnIndex]->Name;
+	if (colName == "Edit")
+	{
+		CustomerAddForm^ addcust = gcnew CustomerAddForm();
+		addcust->id_text->Text = dataGridView1->Rows[e->RowIndex]->Cells[1]->Value->ToString();
+		addcust->lname_text->Text = dataGridView1->Rows[e->RowIndex]->Cells[2]->Value->ToString();
+		addcust->fname_text->Text = dataGridView1->Rows[e->RowIndex]->Cells[3]->Value->ToString();
+		addcust->ShowDialog();
+		
+	}
+	else if (colName == "Delete")
+	{
+		if (MessageBox::Show("Voulez-vous vraiment supprimer ce client ?", "Supprimer?", MessageBoxButtons::YesNo, MessageBoxIcon::Question) == Windows::Forms::DialogResult::Yes)
+		{
+			NS_Ctrl::Ctrl_Items^ OB_Ctrl_item = gcnew NS_Ctrl::Ctrl_Items();
+
+			OB_Ctrl_item->DELETE(Convert::ToString(dataGridView1->Rows[e->RowIndex]->Cells[1]->Value));
+			MessageBox::Show("Record has been successfully deleted!");
+		}
+	}
+	LoadItem();
+}
+
 };
 }

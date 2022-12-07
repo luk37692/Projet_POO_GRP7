@@ -6,8 +6,8 @@ namespace NS_Models
 
 		//this->birth_date = "default";
 		this->id = 0;
-		this->first_name = "default";
-		this->last_name = "default";
+		this->first_name = "";
+		this->last_name = "";
 	}
 
 
@@ -36,7 +36,7 @@ namespace NS_Models
 	}
 
 	String^ Customer::UPDATE(void) {
-		return "EXECUTE UpdateCustomer @last_name_c = " + getLast_name() + ", @first_name_c = " + getFirst_name() + ", @birth_date = " + getBirth_date();
+		return "EXECUTE UpdateCustomer @last_name_c = '" + getLast_name() + "', @first_name_c = '" + getFirst_name() + "', @birth_date = '" + getBirth_date() + "', @person_id = " + getId();
 	}
 
 	String^ Customer::DELETE(void) {

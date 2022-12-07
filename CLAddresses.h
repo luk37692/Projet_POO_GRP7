@@ -9,7 +9,7 @@ namespace NS_Models {
 	private:
 		int id_address;
 		String^ additional_address_data;
-		String^ type;
+		int type;
 		String^ street_number;
 		String^ street_name;
 		CLCity objet_city;
@@ -21,9 +21,15 @@ namespace NS_Models {
 		void setId_addresses(int _sID);
 		void setId_person(int _pID);
 		void setId_city(int _cID);
+		void setAddressType(int);
+		void setPostalCode(int);
+		void setCityName(String^);
 		String^ getStreet_name(void);
 		String^ getStreet_number(void);
 		String^ getStreet_data(void);
+		int getAddressType(void);
+		int getPostalCode(void);
+		String^ getCityName(void);
 		int getId_addresses(void);
 		int getId_person(void);
 		int getId_city(void);

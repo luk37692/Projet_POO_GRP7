@@ -14,7 +14,7 @@ namespace NS_Ctrl {
 		Ctrl_Items();
 		DataSet^ listItems(String^);
 		void ADD(String^, String^, String^, String^, float, int);
-		void UPDATE(int, String^, String^, String^, String^, float, int);
+		void UPDATE(String^, String^, String^, String^, float, int);
 		void DELETE(String^);
 	};
 }

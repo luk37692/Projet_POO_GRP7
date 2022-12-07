@@ -128,6 +128,7 @@
     <ClCompile Include="CLmaps.cpp" />
     <ClCompile Include="CLMean_of_payment.cpp" />
     <ClCompile Include="CLquantity_discount.cpp" />
+    <ClCompile Include="Ctrl_Addresses.cpp" />
     <ClCompile Include="Ctrl_Customers.cpp" />
     <ClCompile Include="Ctrl_Employee.cpp" />
     <ClCompile Include="Ctrl_Items.cpp" />
@@ -156,6 +157,7 @@
     <ClInclude Include="CLmaps.h" />
     <ClInclude Include="CLMean_of_payment.h" />
     <ClInclude Include="CLquantity_discount.h" />
+    <ClInclude Include="Ctrl_Addresses.h" />
     <ClInclude Include="CustomerAddForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>

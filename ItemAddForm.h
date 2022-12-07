@@ -1,5 +1,5 @@
 #pragma once
-
+#include "Ctrl_Items.h"
 namespace ProjetPOOGRP7 {
 
 	using namespace System;
@@ -58,6 +58,7 @@ namespace ProjetPOOGRP7 {
 	private: System::Windows::Forms::Label^ label12;
 	private: System::Windows::Forms::Label^ label13;
 	private: System::Windows::Forms::Label^ label14;
+	private: System::Windows::Forms::Button^ upd_item_button;
 
 	private:
 		/// <summary>
@@ -84,6 +85,7 @@ namespace ProjetPOOGRP7 {
 			this->label12 = (gcnew System::Windows::Forms::Label());
 			this->label13 = (gcnew System::Windows::Forms::Label());
 			this->label14 = (gcnew System::Windows::Forms::Label());
+			this->upd_item_button = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// quantityItem_text
@@ -200,11 +202,22 @@ namespace ProjetPOOGRP7 {
 			this->label14->Text = L"Nom";
 			this->label14->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
+			// upd_item_button
+			// 
+			this->upd_item_button->Location = System::Drawing::Point(69, 263);
+			this->upd_item_button->Name = L"upd_item_button";
+			this->upd_item_button->Size = System::Drawing::Size(318, 83);
+			this->upd_item_button->TabIndex = 114;
+			this->upd_item_button->Text = L"Sauvegarder changements";
+			this->upd_item_button->UseVisualStyleBackColor = true;
+			this->upd_item_button->Click += gcnew System::EventHandler(this, &ItemAddForm::upd_item_button_Click);
+			// 
 			// ItemAddForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(463, 358);
+			this->Controls->Add(this->upd_item_button);
 			this->Controls->Add(this->quantityItem_text);
 			this->Controls->Add(this->label16);
 			this->Controls->Add(this->colorItem_text);
@@ -224,5 +237,9 @@ namespace ProjetPOOGRP7 {
 
 		}
 #pragma endregion
-	};
+	private: System::Void upd_item_button_Click(System::Object^ sender, System::EventArgs^ e) {
+		NS_Ctrl::Ctrl_Items^ OB_Ctrl_item = gcnew NS_Ctrl::Ctrl_Items();
+		OB_Ctrl_item->UPDATE(refitem_text->Text, typeItem_text->Text, nameItem_text->Text, colorItem_text->Text, Convert::ToDouble(priceItem_text->Text), Convert::ToInt32(quantityItem_text->Text));
+	}
+};
 }

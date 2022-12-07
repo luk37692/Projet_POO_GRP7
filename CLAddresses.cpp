@@ -6,7 +6,7 @@ namespace NS_Models
 	CLAddresses::CLAddresses() {
 		this->id_address = 0;
 		this->additional_address_data = "default";
-		this->type = "default";
+		this->type = 0;
 		this->street_number = "default";
 	}
 	void CLAddresses::setStreet_name(String^ _sName) {
@@ -45,23 +45,47 @@ namespace NS_Models
 	int CLAddresses::getId_city(void) {
 		return objet_city.getId_city();
 	}
-	String^ CLAddresses::SELECT()
-	{
-		return "feur";
+
+
+	String^ CLAddresses::getCityName(void) {
+		return objet_city.getName_city();
 	}
-	String^ CLAddresses::INSERT()
-	{
-		return "feur";
+
+	int CLAddresses::getPostalCode(void) {
+		return objet_city.getPostal_code();
 	}
-	String^ CLAddresses::UPDATE()
-	{
-		return "feur";
+
+	void CLAddresses::setPostalCode(int postal_code) {
+		objet_city.setPostal_code(postal_code);
 	}
-	String^ CLAddresses::DELETE()
-	{
+
+	void CLAddresses::setAddressType(int address_type) {
+		this->type = address_type;
+	}
+
+	void CLAddresses::setCityName(String^ city_name) {
+		objet_city.setName_city(city_name);
+	}
+
+	int CLAddresses::getAddressType() {
+		return this->type;
+	}
+
+	String^ CLAddresses::INSERT(void) {
+		return "EXECUTE InsertAddress @street_name = " + getStreet_name() + ", @street_number = " + getStreet_number() + ", @additional_address_data = " + getStreet_data() + ", @type = " + getAddressType() + ", @person_id = " + getId_person() + ", @city_name = " + getCityName() + ", @postal_code = " + getPostalCode();
+	}
+
+	String^ CLAddresses::SELECT(void) {
 		return "feur";
 	}
 
+	String^ CLAddresses::UPDATE(void) {
+		return "feur";
+	}
 
+	String^ CLAddresses::DELETE(void) {
+		return "feur";
+	}
+	
 
 }

@@ -9,25 +9,22 @@ namespace NS_Ctrl {
 	DataSet^ Ctrl_Orders::listOrders(String^ sDataTableName) {
 		return this->ds = OB_connect->getRows(OB_Orders->SELECT(), sDataTableName);
 	}
-	void Ctrl_Orders::ADD(String^_issuing_date, String^ ref, String^ _delivery_date, float _total_priceDF, int CustId) {
+	void Ctrl_Orders::ADD(System::DateTime _issuing_date, String^ ref, System::DateTime _delivery_date, float _total_priceDF, int CustId) {
 		this->OB_Orders->setIssuing_date(_issuing_date);
-		this->OB_Orders->reference(_issuing_date);
+		this->OB_Orders->reference(ref);
 		this->OB_Orders->setDelivery_date(_delivery_date);
 		this->OB_Orders->setTotal_price_df(_total_priceDF);
+		this->OB_Orders->setCustomerId(CustId);
 		this->OB_connect->actionRows(this->OB_Orders->INSERT());
 	}
 
-	void Ctrl_Orders::UPDATE(int _id, String^ _issuing_date, String^ ref, String^ _delivery_date, float _total_priceDF, int CustId) {
+	void Ctrl_Orders::UPDATE(int _id, System::DateTime _issuing_date, String^ ref, System::DateTime _delivery_date, float _total_priceDF, int CustId) {
 		this->OB_Orders->setId_order(_id);
 		this->OB_Orders->setIssuing_date(_issuing_date);
-		this->OB_Orders->reference(_issuing_date);
-		this->OB_Orders->setDelivery_date(_delivery_date);
-		this->OB_Orders->setTotal_price_df(_total_priceDF);
-		this->OB_connect->actionRows(this->OB_Orders->UPDATE());
-	}
+		this->OB_Orders->reference(ref);
 
-	void Ctrl_Orders::DELETE(int _id) {
-		this->OB_Orders->setId_order(_id);
-		this->OB_connect->actionRows(this->OB_Orders->DELETE());
+	}
+	void Ctrl_Orders::DELETE(String^ _reference) {
+		this->OB_Orders->setOrderReference(_reference);
 	}
 }

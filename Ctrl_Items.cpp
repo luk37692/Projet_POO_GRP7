@@ -17,8 +17,7 @@ namespace NS_Ctrl {
 		this->OB_Items->setItems_quantity(quantity);
 		this->OB_connect->actionRows(this->OB_Items->INSERT());
 	}
-	void Ctrl_Items::UPDATE(int id, String^ ref, String^ type, String^ name, String^ color, float pricedf, int quantity) {
-		this->OB_Items->setId_items(id);
+	void Ctrl_Items::UPDATE(String^ ref, String^ type, String^ name, String^ color, float pricedf, int quantity) {
 		this->OB_Items->setItems_reference(ref);
 		this->OB_Items->setType(type);
 		this->OB_Items->setName(name);

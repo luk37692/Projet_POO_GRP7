@@ -11,10 +11,10 @@ namespace NS_Ctrl {
 		DataSet^ ds;
 	public:
 		Ctrl_Customers();
-		DataSet^ listCustomer(String^);
+		DataSet^ listCustomer(String^, String^);
 		void ADD(String^, String^, DateTime);
-		void UPDATE(String^, String^, DateTime);
-		void DELETE(String^, String^, DateTime);
+		void UPDATE(String^, String^, DateTime, int);
+		void DELETE(int);
 		DataSet^ getDataSet();
 	};
 }

@@ -14,9 +14,9 @@ namespace NS_Ctrl {
 	public:
 		Ctrl_Orders();
 		DataSet^ listOrders(String^);
-		void ADD(String^, String^, String^, float, int);
-		void UPDATE(int, String^, String^, String^, float, int);
-		void DELETE(int);
+		void ADD(System::DateTime, String^, System::DateTime, float, int);
+		void UPDATE(int, System::DateTime, String^, System::DateTime, float, int);
+		void DELETE(String^);
 	};
 
 }

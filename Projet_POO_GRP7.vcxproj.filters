@@ -150,6 +150,9 @@
     <ClCompile Include="ItemAddForm.cpp">
       <Filter>Forms\Fichiers source</Filter>
     </ClCompile>
+    <ClCompile Include="Ctrl_Addresses.cpp">
+      <Filter>Fichiers de Services</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="UserLogin.h">
@@ -324,6 +327,9 @@
       <Filter>Fichiers de Mappage</Filter>
     </ClInclude>
     <ClInclude Include="pch.h">
+      <Filter>Fichiers de Mappage</Filter>
+    </ClInclude>
+    <ClInclude Include="Ctrl_Addresses.h">
       <Filter>Fichiers de Mappage</Filter>
     </ClInclude>
   </ItemGroup>

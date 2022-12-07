@@ -36,10 +36,10 @@ namespace ProjetPOOGRP7 {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Label^ Cust_add_name;
-	private: System::Windows::Forms::Label^ Cust_add_lastname;
-	private: System::Windows::Forms::TextBox^ fname_text_add;
-	private: System::Windows::Forms::TextBox^ lname_text_add;
+
+
+
+
 
 
 
@@ -66,11 +66,21 @@ namespace ProjetPOOGRP7 {
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::Label^ label4;
 
-	private: System::Windows::Forms::Label^ label5;
-	private: System::Windows::Forms::DateTimePicker^ dateTimePicker1;
+
+
 
 
 	private: System::Windows::Forms::Label^ label6;
+	public: System::Windows::Forms::DateTimePicker^ dateTimePicker1;
+	private:
+	public: System::Windows::Forms::TextBox^ lname_text;
+	public: System::Windows::Forms::TextBox^ fname_text;
+	public: System::Windows::Forms::TextBox^ id_text;
+	private: System::Windows::Forms::Label^ label5;
+	public:
+	private: System::Windows::Forms::Label^ label7;
+	private: System::Windows::Forms::Label^ label8;
+	private: System::Windows::Forms::Label^ label_fname;
 
 
 
@@ -93,10 +103,6 @@ namespace ProjetPOOGRP7 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->Cust_add_name = (gcnew System::Windows::Forms::Label());
-			this->Cust_add_lastname = (gcnew System::Windows::Forms::Label());
-			this->fname_text_add = (gcnew System::Windows::Forms::TextBox());
-			this->lname_text_add = (gcnew System::Windows::Forms::TextBox());
 			this->Add_customer_button = (gcnew System::Windows::Forms::Button());
 			this->cust_street_numb_text = (gcnew System::Windows::Forms::TextBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
@@ -109,42 +115,16 @@ namespace ProjetPOOGRP7 {
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
-			this->label5 = (gcnew System::Windows::Forms::Label());
-			this->dateTimePicker1 = (gcnew System::Windows::Forms::DateTimePicker());
 			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->dateTimePicker1 = (gcnew System::Windows::Forms::DateTimePicker());
+			this->lname_text = (gcnew System::Windows::Forms::TextBox());
+			this->fname_text = (gcnew System::Windows::Forms::TextBox());
+			this->id_text = (gcnew System::Windows::Forms::TextBox());
+			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->label_fname = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
-			// 
-			// Cust_add_name
-			// 
-			this->Cust_add_name->AutoSize = true;
-			this->Cust_add_name->Location = System::Drawing::Point(61, 121);
-			this->Cust_add_name->Name = L"Cust_add_name";
-			this->Cust_add_name->Size = System::Drawing::Size(36, 16);
-			this->Cust_add_name->TabIndex = 0;
-			this->Cust_add_name->Text = L"Nom";
-			// 
-			// Cust_add_lastname
-			// 
-			this->Cust_add_lastname->AutoSize = true;
-			this->Cust_add_lastname->Location = System::Drawing::Point(43, 70);
-			this->Cust_add_lastname->Name = L"Cust_add_lastname";
-			this->Cust_add_lastname->Size = System::Drawing::Size(54, 16);
-			this->Cust_add_lastname->TabIndex = 1;
-			this->Cust_add_lastname->Text = L"Prénom";
-			// 
-			// fname_text_add
-			// 
-			this->fname_text_add->Location = System::Drawing::Point(152, 64);
-			this->fname_text_add->Name = L"fname_text_add";
-			this->fname_text_add->Size = System::Drawing::Size(133, 22);
-			this->fname_text_add->TabIndex = 2;
-			// 
-			// lname_text_add
-			// 
-			this->lname_text_add->Location = System::Drawing::Point(152, 115);
-			this->lname_text_add->Name = L"lname_text_add";
-			this->lname_text_add->Size = System::Drawing::Size(133, 22);
-			this->lname_text_add->TabIndex = 3;
 			// 
 			// Add_customer_button
 			// 
@@ -152,7 +132,7 @@ namespace ProjetPOOGRP7 {
 			this->Add_customer_button->Name = L"Add_customer_button";
 			this->Add_customer_button->Size = System::Drawing::Size(664, 142);
 			this->Add_customer_button->TabIndex = 4;
-			this->Add_customer_button->Text = L"Ajouter Client";
+			this->Add_customer_button->Text = L"Sauvegarder changements";
 			this->Add_customer_button->UseVisualStyleBackColor = true;
 			this->Add_customer_button->Click += gcnew System::EventHandler(this, &CustomerAddForm::Add_customer_button_Click);
 			// 
@@ -247,25 +227,6 @@ namespace ProjetPOOGRP7 {
 			this->label4->TabIndex = 15;
 			this->label4->Text = L" ";
 			// 
-			// label5
-			// 
-			this->label5->AutoSize = true;
-			this->label5->Location = System::Drawing::Point(21, 167);
-			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(120, 16);
-			this->label5->TabIndex = 17;
-			this->label5->Text = L"Date de naissance";
-			// 
-			// dateTimePicker1
-			// 
-			this->dateTimePicker1->Format = System::Windows::Forms::DateTimePickerFormat::Short;
-			this->dateTimePicker1->Location = System::Drawing::Point(152, 161);
-			this->dateTimePicker1->MaxDate = System::DateTime(2100, 12, 31, 0, 0, 0, 0);
-			this->dateTimePicker1->MinDate = System::DateTime(1900, 1, 1, 0, 0, 0, 0);
-			this->dateTimePicker1->Name = L"dateTimePicker1";
-			this->dateTimePicker1->Size = System::Drawing::Size(133, 22);
-			this->dateTimePicker1->TabIndex = 18;
-			// 
 			// label6
 			// 
 			this->label6->AutoSize = true;
@@ -277,14 +238,99 @@ namespace ProjetPOOGRP7 {
 			this->label6->TabIndex = 19;
 			this->label6->Text = L"Infos Personnels";
 			// 
+			// dateTimePicker1
+			// 
+			this->dateTimePicker1->Format = System::Windows::Forms::DateTimePickerFormat::Short;
+			this->dateTimePicker1->Location = System::Drawing::Point(132, 165);
+			this->dateTimePicker1->MaxDate = System::DateTime(2100, 12, 31, 0, 0, 0, 0);
+			this->dateTimePicker1->MinDate = System::DateTime(1900, 1, 1, 0, 0, 0, 0);
+			this->dateTimePicker1->Name = L"dateTimePicker1";
+			this->dateTimePicker1->Size = System::Drawing::Size(146, 22);
+			this->dateTimePicker1->TabIndex = 28;
+			// 
+			// lname_text
+			// 
+			this->lname_text->Location = System::Drawing::Point(132, 125);
+			this->lname_text->Name = L"lname_text";
+			this->lname_text->Size = System::Drawing::Size(146, 22);
+			this->lname_text->TabIndex = 27;
+			// 
+			// fname_text
+			// 
+			this->fname_text->Location = System::Drawing::Point(132, 91);
+			this->fname_text->Name = L"fname_text";
+			this->fname_text->Size = System::Drawing::Size(146, 22);
+			this->fname_text->TabIndex = 26;
+			// 
+			// id_text
+			// 
+			this->id_text->Location = System::Drawing::Point(132, 59);
+			this->id_text->Name = L"id_text";
+			this->id_text->Size = System::Drawing::Size(146, 22);
+			this->id_text->TabIndex = 25;
+			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9));
+			this->label5->ImeMode = System::Windows::Forms::ImeMode::NoControl;
+			this->label5->Location = System::Drawing::Point(68, 60);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(22, 18);
+			this->label5->TabIndex = 24;
+			this->label5->Text = L"ID";
+			this->label5->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// label7
+			// 
+			this->label7->AutoSize = true;
+			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9));
+			this->label7->ImeMode = System::Windows::Forms::ImeMode::NoControl;
+			this->label7->Location = System::Drawing::Point(15, 159);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(75, 36);
+			this->label7->TabIndex = 23;
+			this->label7->Text = L"Date de \r\nnaissance";
+			this->label7->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// label8
+			// 
+			this->label8->AutoSize = true;
+			this->label8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9));
+			this->label8->ImeMode = System::Windows::Forms::ImeMode::NoControl;
+			this->label8->Location = System::Drawing::Point(50, 125);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(41, 18);
+			this->label8->TabIndex = 22;
+			this->label8->Text = L"Nom";
+			this->label8->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// label_fname
+			// 
+			this->label_fname->AutoSize = true;
+			this->label_fname->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9));
+			this->label_fname->ImeMode = System::Windows::Forms::ImeMode::NoControl;
+			this->label_fname->Location = System::Drawing::Point(30, 91);
+			this->label_fname->Name = L"label_fname";
+			this->label_fname->Size = System::Drawing::Size(61, 18);
+			this->label_fname->TabIndex = 21;
+			this->label_fname->Text = L"Prénom";
+			this->label_fname->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
 			// CustomerAddForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(688, 371);
-			this->Controls->Add(this->label6);
 			this->Controls->Add(this->dateTimePicker1);
+			this->Controls->Add(this->lname_text);
+			this->Controls->Add(this->fname_text);
+			this->Controls->Add(this->id_text);
 			this->Controls->Add(this->label5);
+			this->Controls->Add(this->label7);
+			this->Controls->Add(this->label8);
+			this->Controls->Add(this->label_fname);
+			this->Controls->Add(this->label6);
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->textBox3);
@@ -297,10 +343,6 @@ namespace ProjetPOOGRP7 {
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->cust_street_numb_text);
 			this->Controls->Add(this->Add_customer_button);
-			this->Controls->Add(this->lname_text_add);
-			this->Controls->Add(this->fname_text_add);
-			this->Controls->Add(this->Cust_add_lastname);
-			this->Controls->Add(this->Cust_add_name);
 			this->Name = L"CustomerAddForm";
 			this->Text = L"CustomerAddForm";
 			this->Load += gcnew System::EventHandler(this, &CustomerAddForm::CustomerAddForm_Load);
@@ -312,7 +354,7 @@ namespace ProjetPOOGRP7 {
 
 	private: System::Void Add_customer_button_Click(System::Object^ sender, System::EventArgs^ e) {
 		NS_Ctrl::Ctrl_Customers^ OB_Ctrl_customer = gcnew NS_Ctrl::Ctrl_Customers();
-		OB_Ctrl_customer->ADD(fname_text_add->Text, lname_text_add->Text, dateTimePicker1->Value);
+		OB_Ctrl_customer->ADD(fname_text->Text, lname_text->Text, dateTimePicker1->Value);
 	}
 private: System::Void CustomerAddForm_Load(System::Object^ sender, System::EventArgs^ e) {
 }
