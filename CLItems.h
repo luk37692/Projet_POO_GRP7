@@ -3,7 +3,7 @@
 #include "CLmaps.h"
 
 namespace NS_Models {
-	ref class CLItems:CLmaps
+	ref class CLItems :CLmaps
 	{
 	private:
 		int id_items;
@@ -11,6 +11,9 @@ namespace NS_Models {
 		String^ type;
 		String^ name;
 		float price_df;
+		int quantity;
+		String^ color;
+
 	public:
 		CLItems();
 		void setId_items(int);
@@ -18,9 +21,13 @@ namespace NS_Models {
 		void setItems_reference(String^);
 		void setName(String^);
 		void setType(String^);
+		void setItems_quantity(int);
 		void setPrice_df(float);
+		void setColors(String^);
 		int getId_items(void);
+		int getItems_quantity(void);
 		String^ getItems_reference(void);
+		String^ getColors(void);
 		String^ getName(void);
 		String^ getType(void);
 		float getPrice_df(void);
@@ -31,5 +38,4 @@ namespace NS_Models {
 		String^ DELETE(void)override;
 
 	};
-
 }

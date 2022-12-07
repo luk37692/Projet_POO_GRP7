@@ -15,6 +15,6 @@ namespace NS_Ctrl {
 		void ADD(String^, String^, DateTime);
 		void UPDATE(String^, String^, DateTime);
 		void DELETE(String^, String^, DateTime);
+		DataSet^ getDataSet();
 	};
-
 }

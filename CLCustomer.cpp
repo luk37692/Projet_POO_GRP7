@@ -21,21 +21,26 @@ namespace NS_Models
 		return this->birth_date;
 	}
 
-	String^ Customer::SELECT()
-	{
-		return "excute SelectCustomer @last_name_c = " + getLast_name() + ", @first_name_c = " + getFirst_name();
+	String^ Customer::INSERT(void) {
+		return "EXECUTE InsertCustomer @last_name_c = '" + getLast_name() + "', @first_name_c = '" + getFirst_name() + "', @birth_date = '" + getBirth_date() + "'";
 	}
-	String^ Customer::INSERT()
-	{
-		return "excute InsertCustomer @last_name_c = " + getLast_name() + ", @first_name_c = " + getFirst_name() + ", @birth_date = " + getBirth_date();
+
+	String^ Customer::SELECT(void) {
+		if (getLast_name() != "" && getFirst_name() != "") {
+			return "EXECUTE getPersonWithBillingAddress @last_name_c = '" + getLast_name() + "', @first_name_c = '" + getFirst_name() + "'";
+		}
+		else {
+			return "EXECUTE SelectCustomers";
+		}
+
 	}
-	String^ Customer::UPDATE()
-	{
-		return "excute UpdateCustomer @last_name_c = " + getLast_name() + ", @first_name_c = " + getFirst_name() + ", @birth_date = " + getBirth_date();
+
+	String^ Customer::UPDATE(void) {
+		return "EXECUTE UpdateCustomer @last_name_c = " + getLast_name() + ", @first_name_c = " + getFirst_name() + ", @birth_date = " + getBirth_date();
 	}
-	String^ Customer::DELETE()
-	{
-		return "excute DeleteCustomer @last_name_c = " + getLast_name() + ", @first_name_c = " + getFirst_name() + ", @birth_date = " + getBirth_date();
+
+	String^ Customer::DELETE(void) {
+		return "EXECUTE DeleteCustomer @customer_id = " + getId();
 	}
 
 }

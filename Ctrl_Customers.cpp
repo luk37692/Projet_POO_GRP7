@@ -42,5 +42,9 @@ namespace NS_Ctrl {
 			this->OB_customer->setCustomer_Birth_Date(_date_birth);
 			this->OB_connect->actionRows(this->OB_customer->DELETE());
 		}
+	}
+	
+	DataSet^ Ctrl_Customers::getDataSet() {
+		return this->ds;
 	};
 }

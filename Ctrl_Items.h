@@ -13,8 +13,8 @@ namespace NS_Ctrl {
 	public:
 		Ctrl_Items();
 		DataSet^ listItems(String^);
-		void ADD(String^, String^, String^, float);
-		void UPDATE(int, String^, String^, String^, float);
+		void ADD(String^, String^, String^, String^, float, int);
+		void UPDATE(int, String^, String^, String^, String^, float, int);
 		void DELETE(int);
 	};
 }

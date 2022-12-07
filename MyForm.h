@@ -4,6 +4,7 @@
 #include "dbConnect.h"
 #include "Ctrl_Employee.h"
 #include "UserLogin.h"
+#include "Ctrl_Items.h"
 namespace ProjetPOOGRP7 {
 
 	using namespace System;
@@ -23,6 +24,7 @@ namespace ProjetPOOGRP7 {
 		MyForm(void)
 		{
 			InitializeComponent();
+			
 			//
 			//TODO: ajoutez ici le code du constructeur
 			//
@@ -98,31 +100,133 @@ namespace ProjetPOOGRP7 {
 	private: System::Windows::Forms::Splitter^ splitter3;
 	private: System::Windows::Forms::TextBox^ textBox4;
 	private: System::Windows::Forms::TextBox^ textBox5;
-	private: System::Windows::Forms::TextBox^ textBox6;
+	private: System::Windows::Forms::TextBox^ refOrder_text;
+
 	private: System::Windows::Forms::Label^ label9;
 	private: System::Windows::Forms::Label^ label10;
 	private: System::Windows::Forms::Label^ label11;
 	private: System::Windows::Forms::Label^ label7;
-	private: System::Windows::Forms::TextBox^ textBox7;
-	private: System::Windows::Forms::TextBox^ textBox8;
-	private: System::Windows::Forms::TextBox^ textBox9;
+	private: System::Windows::Forms::TextBox^ typeItem_text;
+
+	private: System::Windows::Forms::TextBox^ nameItem_text;
+
+	private: System::Windows::Forms::TextBox^ refitem_text;
+
 	private: System::Windows::Forms::Label^ label12;
 	private: System::Windows::Forms::Label^ label13;
 	private: System::Windows::Forms::Label^ label14;
 	private: System::Windows::Forms::Label^ label8;
-	private: System::Windows::Forms::Button^ button12;
-	private: System::Windows::Forms::Button^ button13;
-	private: System::Windows::Forms::Button^ button14;
-	private: System::Windows::Forms::Button^ button15;
+	private: System::Windows::Forms::Button^ searchItem_button;
+	private: System::Windows::Forms::Button^ deleteItem_button;
+
+
+	private: System::Windows::Forms::Button^ updateItem_button;
+
+	private: System::Windows::Forms::Button^ addItem_button;
+
 	private: System::Windows::Forms::Splitter^ splitter4;
 	private: System::Windows::Forms::TabPage^ tabPage6;
-	private: System::Windows::Forms::TextBox^ textBox12;
+private: System::Windows::Forms::TextBox^ colorItem_text;
+
 	private: System::Windows::Forms::Label^ label17;
-	private: System::Windows::Forms::TextBox^ textBox11;
-	private: System::Windows::Forms::Label^ label16;
-	private: System::Windows::Forms::TextBox^ textBox10;
+private: System::Windows::Forms::TextBox^ priceItem_text;
+
+
+
 	private: System::Windows::Forms::Label^ label15;
 private: System::Windows::Forms::Button^ button1;
+private: System::Windows::Forms::TextBox^ quantityItem_text;
+
+
+
+
+
+
+
+
+
+
+
+
+
+private: System::Windows::Forms::Label^ label16;
+private: System::Windows::Forms::DataGridView^ dgvProduct;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column1;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column7;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column2;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ Type;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column6;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column3;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column4;
+private: System::Windows::Forms::DataGridViewImageColumn^ Edit;
+private: System::Windows::Forms::DataGridViewImageColumn^ Delete;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -165,9 +269,12 @@ private: System::Windows::Forms::Button^ button1;
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle3 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle4 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->Features_tab = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
+			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->dateTimePicker1 = (gcnew System::Windows::Forms::DateTimePicker());
 			this->lname_text = (gcnew System::Windows::Forms::TextBox());
 			this->fname_text = (gcnew System::Windows::Forms::TextBox());
@@ -186,7 +293,7 @@ private: System::Windows::Forms::Button^ button1;
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
 			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
+			this->refOrder_text = (gcnew System::Windows::Forms::TextBox());
 			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->label11 = (gcnew System::Windows::Forms::Label());
@@ -197,23 +304,33 @@ private: System::Windows::Forms::Button^ button1;
 			this->button11 = (gcnew System::Windows::Forms::Button());
 			this->splitter3 = (gcnew System::Windows::Forms::Splitter());
 			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
-			this->textBox12 = (gcnew System::Windows::Forms::TextBox());
-			this->label17 = (gcnew System::Windows::Forms::Label());
-			this->textBox11 = (gcnew System::Windows::Forms::TextBox());
+			this->dgvProduct = (gcnew System::Windows::Forms::DataGridView());
+			this->Column1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column7 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Type = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column6 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column4 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Edit = (gcnew System::Windows::Forms::DataGridViewImageColumn());
+			this->Delete = (gcnew System::Windows::Forms::DataGridViewImageColumn());
+			this->quantityItem_text = (gcnew System::Windows::Forms::TextBox());
 			this->label16 = (gcnew System::Windows::Forms::Label());
-			this->textBox10 = (gcnew System::Windows::Forms::TextBox());
+			this->colorItem_text = (gcnew System::Windows::Forms::TextBox());
+			this->label17 = (gcnew System::Windows::Forms::Label());
+			this->priceItem_text = (gcnew System::Windows::Forms::TextBox());
 			this->label15 = (gcnew System::Windows::Forms::Label());
-			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox8 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
+			this->typeItem_text = (gcnew System::Windows::Forms::TextBox());
+			this->nameItem_text = (gcnew System::Windows::Forms::TextBox());
+			this->refitem_text = (gcnew System::Windows::Forms::TextBox());
 			this->label12 = (gcnew System::Windows::Forms::Label());
 			this->label13 = (gcnew System::Windows::Forms::Label());
 			this->label14 = (gcnew System::Windows::Forms::Label());
 			this->label8 = (gcnew System::Windows::Forms::Label());
-			this->button12 = (gcnew System::Windows::Forms::Button());
-			this->button13 = (gcnew System::Windows::Forms::Button());
-			this->button14 = (gcnew System::Windows::Forms::Button());
-			this->button15 = (gcnew System::Windows::Forms::Button());
+			this->searchItem_button = (gcnew System::Windows::Forms::Button());
+			this->deleteItem_button = (gcnew System::Windows::Forms::Button());
+			this->updateItem_button = (gcnew System::Windows::Forms::Button());
+			this->addItem_button = (gcnew System::Windows::Forms::Button());
 			this->splitter4 = (gcnew System::Windows::Forms::Splitter());
 			this->tabPage4 = (gcnew System::Windows::Forms::TabPage());
 			this->button4 = (gcnew System::Windows::Forms::Button());
@@ -230,12 +347,12 @@ private: System::Windows::Forms::Button^ button1;
 			this->splitter2 = (gcnew System::Windows::Forms::Splitter());
 			this->tabPage5 = (gcnew System::Windows::Forms::TabPage());
 			this->tabPage6 = (gcnew System::Windows::Forms::TabPage());
-			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->Features_tab->SuspendLayout();
 			this->tabPage1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->tabPage2->SuspendLayout();
 			this->tabPage3->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgvProduct))->BeginInit();
 			this->tabPage4->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -272,6 +389,13 @@ private: System::Windows::Forms::Button^ button1;
 			resources->ApplyResources(this->tabPage1, L"tabPage1");
 			this->tabPage1->Name = L"tabPage1";
 			this->tabPage1->UseVisualStyleBackColor = true;
+			// 
+			// button1
+			// 
+			resources->ApplyResources(this->button1, L"button1");
+			this->button1->Name = L"button1";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
 			// 
 			// dateTimePicker1
 			// 
@@ -367,7 +491,7 @@ private: System::Windows::Forms::Button^ button1;
 			// 
 			this->tabPage2->Controls->Add(this->textBox4);
 			this->tabPage2->Controls->Add(this->textBox5);
-			this->tabPage2->Controls->Add(this->textBox6);
+			this->tabPage2->Controls->Add(this->refOrder_text);
 			this->tabPage2->Controls->Add(this->label9);
 			this->tabPage2->Controls->Add(this->label10);
 			this->tabPage2->Controls->Add(this->label11);
@@ -391,10 +515,10 @@ private: System::Windows::Forms::Button^ button1;
 			resources->ApplyResources(this->textBox5, L"textBox5");
 			this->textBox5->Name = L"textBox5";
 			// 
-			// textBox6
+			// refOrder_text
 			// 
-			resources->ApplyResources(this->textBox6, L"textBox6");
-			this->textBox6->Name = L"textBox6";
+			resources->ApplyResources(this->refOrder_text, L"refOrder_text");
+			this->refOrder_text->Name = L"refOrder_text";
 			// 
 			// label9
 			// 
@@ -448,72 +572,159 @@ private: System::Windows::Forms::Button^ button1;
 			// 
 			// tabPage3
 			// 
-			this->tabPage3->Controls->Add(this->textBox12);
-			this->tabPage3->Controls->Add(this->label17);
-			this->tabPage3->Controls->Add(this->textBox11);
+			this->tabPage3->Controls->Add(this->dgvProduct);
+			this->tabPage3->Controls->Add(this->quantityItem_text);
 			this->tabPage3->Controls->Add(this->label16);
-			this->tabPage3->Controls->Add(this->textBox10);
+			this->tabPage3->Controls->Add(this->colorItem_text);
+			this->tabPage3->Controls->Add(this->label17);
+			this->tabPage3->Controls->Add(this->priceItem_text);
 			this->tabPage3->Controls->Add(this->label15);
-			this->tabPage3->Controls->Add(this->textBox7);
-			this->tabPage3->Controls->Add(this->textBox8);
-			this->tabPage3->Controls->Add(this->textBox9);
+			this->tabPage3->Controls->Add(this->typeItem_text);
+			this->tabPage3->Controls->Add(this->nameItem_text);
+			this->tabPage3->Controls->Add(this->refitem_text);
 			this->tabPage3->Controls->Add(this->label12);
 			this->tabPage3->Controls->Add(this->label13);
 			this->tabPage3->Controls->Add(this->label14);
 			this->tabPage3->Controls->Add(this->label8);
-			this->tabPage3->Controls->Add(this->button12);
-			this->tabPage3->Controls->Add(this->button13);
-			this->tabPage3->Controls->Add(this->button14);
-			this->tabPage3->Controls->Add(this->button15);
+			this->tabPage3->Controls->Add(this->searchItem_button);
+			this->tabPage3->Controls->Add(this->deleteItem_button);
+			this->tabPage3->Controls->Add(this->updateItem_button);
+			this->tabPage3->Controls->Add(this->addItem_button);
 			this->tabPage3->Controls->Add(this->splitter4);
 			resources->ApplyResources(this->tabPage3, L"tabPage3");
 			this->tabPage3->Name = L"tabPage3";
 			this->tabPage3->UseVisualStyleBackColor = true;
 			// 
-			// textBox12
+			// dgvProduct
 			// 
-			resources->ApplyResources(this->textBox12, L"textBox12");
-			this->textBox12->Name = L"textBox12";
+			this->dgvProduct->AllowUserToAddRows = false;
+			this->dgvProduct->BackgroundColor = System::Drawing::Color::White;
+			this->dgvProduct->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
+			dataGridViewCellStyle3->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(70)),
+				static_cast<System::Int32>(static_cast<System::Byte>(160)));
+			dataGridViewCellStyle3->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			dataGridViewCellStyle3->ForeColor = System::Drawing::Color::White;
+			dataGridViewCellStyle3->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle3->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle3->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->dgvProduct->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+			resources->ApplyResources(this->dgvProduct, L"dgvProduct");
+			this->dgvProduct->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::DisableResizing;
+			this->dgvProduct->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(9) {
+				this->Column1, this->Column7,
+					this->Column2, this->Type, this->Column6, this->Column3, this->Column4, this->Edit, this->Delete
+			});
+			dataGridViewCellStyle4->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle4->BackColor = System::Drawing::SystemColors::Window;
+			dataGridViewCellStyle4->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			dataGridViewCellStyle4->ForeColor = System::Drawing::Color::Black;
+			dataGridViewCellStyle4->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle4->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle4->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			this->dgvProduct->DefaultCellStyle = dataGridViewCellStyle4;
+			this->dgvProduct->EnableHeadersVisualStyles = false;
+			this->dgvProduct->Name = L"dgvProduct";
 			// 
-			// label17
+			// Column1
 			// 
-			resources->ApplyResources(this->label17, L"label17");
-			this->label17->Name = L"label17";
+			resources->ApplyResources(this->Column1, L"Column1");
+			this->Column1->Name = L"Column1";
 			// 
-			// textBox11
+			// Column7
 			// 
-			resources->ApplyResources(this->textBox11, L"textBox11");
-			this->textBox11->Name = L"textBox11";
+			resources->ApplyResources(this->Column7, L"Column7");
+			this->Column7->Name = L"Column7";
+			// 
+			// Column2
+			// 
+			this->Column2->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
+			resources->ApplyResources(this->Column2, L"Column2");
+			this->Column2->Name = L"Column2";
+			// 
+			// Type
+			// 
+			resources->ApplyResources(this->Type, L"Type");
+			this->Type->Name = L"Type";
+			// 
+			// Column6
+			// 
+			this->Column6->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
+			resources->ApplyResources(this->Column6, L"Column6");
+			this->Column6->Name = L"Column6";
+			// 
+			// Column3
+			// 
+			this->Column3->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
+			resources->ApplyResources(this->Column3, L"Column3");
+			this->Column3->Name = L"Column3";
+			// 
+			// Column4
+			// 
+			this->Column4->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
+			resources->ApplyResources(this->Column4, L"Column4");
+			this->Column4->Name = L"Column4";
+			// 
+			// Edit
+			// 
+			this->Edit->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
+			resources->ApplyResources(this->Edit, L"Edit");
+			this->Edit->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Edit.Image")));
+			this->Edit->Name = L"Edit";
+			// 
+			// Delete
+			// 
+			this->Delete->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
+			resources->ApplyResources(this->Delete, L"Delete");
+			this->Delete->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Delete.Image")));
+			this->Delete->Name = L"Delete";
+			// 
+			// quantityItem_text
+			// 
+			resources->ApplyResources(this->quantityItem_text, L"quantityItem_text");
+			this->quantityItem_text->Name = L"quantityItem_text";
 			// 
 			// label16
 			// 
 			resources->ApplyResources(this->label16, L"label16");
 			this->label16->Name = L"label16";
 			// 
-			// textBox10
+			// colorItem_text
 			// 
-			resources->ApplyResources(this->textBox10, L"textBox10");
-			this->textBox10->Name = L"textBox10";
+			resources->ApplyResources(this->colorItem_text, L"colorItem_text");
+			this->colorItem_text->Name = L"colorItem_text";
+			// 
+			// label17
+			// 
+			resources->ApplyResources(this->label17, L"label17");
+			this->label17->Name = L"label17";
+			// 
+			// priceItem_text
+			// 
+			resources->ApplyResources(this->priceItem_text, L"priceItem_text");
+			this->priceItem_text->Name = L"priceItem_text";
 			// 
 			// label15
 			// 
 			resources->ApplyResources(this->label15, L"label15");
 			this->label15->Name = L"label15";
 			// 
-			// textBox7
+			// typeItem_text
 			// 
-			resources->ApplyResources(this->textBox7, L"textBox7");
-			this->textBox7->Name = L"textBox7";
+			resources->ApplyResources(this->typeItem_text, L"typeItem_text");
+			this->typeItem_text->Name = L"typeItem_text";
 			// 
-			// textBox8
+			// nameItem_text
 			// 
-			resources->ApplyResources(this->textBox8, L"textBox8");
-			this->textBox8->Name = L"textBox8";
+			resources->ApplyResources(this->nameItem_text, L"nameItem_text");
+			this->nameItem_text->Name = L"nameItem_text";
 			// 
-			// textBox9
+			// refitem_text
 			// 
-			resources->ApplyResources(this->textBox9, L"textBox9");
-			this->textBox9->Name = L"textBox9";
+			resources->ApplyResources(this->refitem_text, L"refitem_text");
+			this->refitem_text->Name = L"refitem_text";
 			// 
 			// label12
 			// 
@@ -535,30 +746,31 @@ private: System::Windows::Forms::Button^ button1;
 			resources->ApplyResources(this->label8, L"label8");
 			this->label8->Name = L"label8";
 			// 
-			// button12
+			// searchItem_button
 			// 
-			resources->ApplyResources(this->button12, L"button12");
-			this->button12->Name = L"button12";
-			this->button12->UseVisualStyleBackColor = true;
+			resources->ApplyResources(this->searchItem_button, L"searchItem_button");
+			this->searchItem_button->Name = L"searchItem_button";
+			this->searchItem_button->UseVisualStyleBackColor = true;
+			this->searchItem_button->Click += gcnew System::EventHandler(this, &MyForm::searchItem_button_Click);
 			// 
-			// button13
+			// deleteItem_button
 			// 
-			resources->ApplyResources(this->button13, L"button13");
-			this->button13->Name = L"button13";
-			this->button13->UseVisualStyleBackColor = true;
+			resources->ApplyResources(this->deleteItem_button, L"deleteItem_button");
+			this->deleteItem_button->Name = L"deleteItem_button";
+			this->deleteItem_button->UseVisualStyleBackColor = true;
 			// 
-			// button14
+			// updateItem_button
 			// 
-			resources->ApplyResources(this->button14, L"button14");
-			this->button14->Name = L"button14";
-			this->button14->UseVisualStyleBackColor = true;
+			resources->ApplyResources(this->updateItem_button, L"updateItem_button");
+			this->updateItem_button->Name = L"updateItem_button";
+			this->updateItem_button->UseVisualStyleBackColor = true;
 			// 
-			// button15
+			// addItem_button
 			// 
-			resources->ApplyResources(this->button15, L"button15");
-			this->button15->Name = L"button15";
-			this->button15->UseVisualStyleBackColor = true;
-			this->button15->Click += gcnew System::EventHandler(this, &MyForm::button15_Click);
+			resources->ApplyResources(this->addItem_button, L"addItem_button");
+			this->addItem_button->Name = L"addItem_button";
+			this->addItem_button->UseVisualStyleBackColor = true;
+			this->addItem_button->Click += gcnew System::EventHandler(this, &MyForm::button15_Click);
 			// 
 			// splitter4
 			// 
@@ -661,13 +873,6 @@ private: System::Windows::Forms::Button^ button1;
 			this->tabPage6->Name = L"tabPage6";
 			this->tabPage6->UseVisualStyleBackColor = true;
 			// 
-			// button1
-			// 
-			resources->ApplyResources(this->button1, L"button1");
-			this->button1->Name = L"button1";
-			this->button1->UseVisualStyleBackColor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
-			// 
 			// MyForm
 			// 
 			resources->ApplyResources(this, L"$this");
@@ -684,6 +889,7 @@ private: System::Windows::Forms::Button^ button1;
 			this->tabPage2->PerformLayout();
 			this->tabPage3->ResumeLayout(false);
 			this->tabPage3->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgvProduct))->EndInit();
 			this->tabPage4->ResumeLayout(false);
 			this->tabPage4->PerformLayout();
 			this->ResumeLayout(false);
@@ -691,59 +897,96 @@ private: System::Windows::Forms::Button^ button1;
 		}
 #pragma endregion
 
-private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e)
-{
-	this->oSvc = gcnew NS_Ctrl::Ctrl_Employee();
-	UserLogin^ Form = gcnew UserLogin;
-	Form->ShowDialog();
-	if (!(Form->DialogResult == System::Windows::Forms::DialogResult::OK))
+		int customer_id = 0;
+	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e)
 	{
-		this->Close();
+		this->oSvc = gcnew NS_Ctrl::Ctrl_Employee();
+		UserLogin^ Form = gcnew UserLogin;
+		Form->ShowDialog();
+		if (!(Form->DialogResult == System::Windows::Forms::DialogResult::OK))
+		{
+			this->Close();
+		}
+		LoadItem();
 	}
-}
-
-private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
-	//String^ rec1;
-	//String^ rec2;
-
-	//rec1 = fname_text->Text->ToString();
-	//rec2 = lname_text->Text->ToString();
-
-	//NS_Models::dbConnect^ connection = gcnew NS_Models::dbConnect;
-	//dataGridView1->ClearSelection();
-	//dataGridView1->Rows->Clear();
-	//this->oDs = NS_Ctrl::Ctrl_Customers::listCustomer(rec1);
-	//NS_Ctrl::Ctrl_Customers::listCustomer(rec1);
-	NS_Ctrl::Ctrl_Customers^ OB_Ctrl_customer = gcnew NS_Ctrl::Ctrl_Customers();
-	this->dataGridView1->Refresh();
-	this->oDs = OB_Ctrl_customer->listCustomer("RESULT");
-	this->dataGridView1->DataSource = this->oDs;
-	this->dataGridView1->DataMember = "Clients";
-}
-private: System::Void add_employee_button_Click(System::Object^ sender, System::EventArgs^ e) {
-	CustomerAddForm^ AddCust = gcnew CustomerAddForm;
-	AddCust->ShowDialog();
-
-}
-private: System::Void updateCust_button_Click(System::Object^ sender, System::EventArgs^ e) {
-	NS_Ctrl::Ctrl_Customers^ OB_Ctrl_customer = gcnew NS_Ctrl::Ctrl_Customers();
-	this->dataGridView1->Refresh();
-	//OB_Ctrl_customer->UPDATE(fname_text->Text, lname_text->Text, dateTimePicker1->Value, 0);
-	//this->dataGridView1->DataSource = OB_Ctrl_customer->getDataSet();
-	this->dataGridView1->DataMember = "Clients";
+	
+	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+		NS_Ctrl::Ctrl_Customers^ OB_Ctrl_customer = gcnew NS_Ctrl::Ctrl_Customers();
+		this->dataGridView1->Refresh();
+		this->oDs = OB_Ctrl_customer->listCustomer("RESULT");
+		this->dataGridView1->DataSource = this->oDs;
+		this->dataGridView1->DataMember = "Clients";
+	}
+	private: System::Void add_employee_button_Click(System::Object^ sender, System::EventArgs^ e) {
+		NS_Ctrl::Ctrl_Customers^ OB_Ctrl_customer = gcnew NS_Ctrl::Ctrl_Customers();
+		this->dataGridView1->Refresh();
+		OB_Ctrl_customer->ADD(fname_text->Text, lname_text->Text, dateTimePicker1->Value);
+	}
+	
+	
+	private: System::Void updateCust_button_Click(System::Object^ sender, System::EventArgs^ e) {
+		NS_Ctrl::Ctrl_Customers^ OB_Ctrl_customer = gcnew NS_Ctrl::Ctrl_Customers();
+		this->dataGridView1->Refresh();
+		//OB_Ctrl_customer->UPDATE(fname_text->Text, lname_text->Text, dateTimePicker1->Value, 0);
+		//this->dataGridView1->DataSource = OB_Ctrl_customer->getDataSet();
+		this->dataGridView1->DataMember = "Clients";
+	
+	
+	}
+	private: System::Void deleteCust_button_Click(System::Object^ sender, System::EventArgs^ e) {
+		NS_Ctrl::Ctrl_Customers^ OB_Ctrl_customer = gcnew NS_Ctrl::Ctrl_Customers();
+		this->dataGridView1->Refresh();
+		OB_Ctrl_customer->DELETE(fname_text->Text, lname_text->Text, dateTimePicker1->Value);
+	}
 
 
-}
-private: System::Void deleteCust_button_Click(System::Object^ sender, System::EventArgs^ e) {
-	NS_Ctrl::Ctrl_Customers^ OB_Ctrl_customer = gcnew NS_Ctrl::Ctrl_Customers();
-	this->dataGridView1->Refresh();
-	OB_Ctrl_customer->DELETE(fname_text->Text, lname_text->Text, dateTimePicker1->Value);
-}
-private: System::Void button15_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-	AddressAddForm^ AddressForm = gcnew AddressAddForm();
-	AddressForm->ShowDialog();
-}
+//ajouter un item
+	private: System::Void button15_Click(System::Object^ sender, System::EventArgs^ e) {
+		NS_Ctrl::Ctrl_Items^ OB_Ctrl_item = gcnew NS_Ctrl::Ctrl_Items();
+		//
+		OB_Ctrl_item->ADD(refitem_text->Text, typeItem_text->Text, nameItem_text->Text, colorItem_text->Text, Convert::ToDouble(priceItem_text->Text), Convert::ToInt32(quantityItem_text->Text));
+		MessageBox::Show("Produit enregistré avec succès.");
+		LoadItem();
+	}
+
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		AddressAddForm^ AddressForm = gcnew AddressAddForm();
+		AddressForm->ShowDialog();
+	}
+	private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+	
+		customer_id = (int)this->dataGridView1[0, e->RowIndex]->Value;
+	
+		NS_Ctrl::Ctrl_Customers^ OB_Ctrl_customer = gcnew NS_Ctrl::Ctrl_Customers();
+		this->dataGridView1->Refresh();
+		this->dataGridView1->DataSource = OB_Ctrl_customer->getDataSet();
+		this->dataGridView1->DataMember = "Clients";
+	}
+
+
+//rechercher item
+	private: System::Void searchItem_button_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		NS_Ctrl::Ctrl_Items^ OB_Ctrl_item = gcnew NS_Ctrl::Ctrl_Items();
+		
+	}
+	SqlCommand^ cm = gcnew SqlCommand();
+	SqlConnection^ con = gcnew SqlConnection("Data Source = LAPTOP-6RJGB3RI\\MSSQL_LUC; Initial Catalog = POO_GRP7; Integrated Security = True; User ID = CNX; Password = cesi123");
+	SqlDataReader^ dr;
+private: Void LoadItem()
+	{
+		int i = 0;
+		dgvProduct->Rows->Clear();
+		cm = gcnew SqlCommand("SELECT * FROM ITEMS JOIN COLORS ON COLORS.item_id = ITEMS.id", con);
+		con->Open();
+		dr = cm->ExecuteReader();
+		while (dr->Read())
+		{
+			i++;
+			dgvProduct->Rows->Add(i, dr[1]->ToString(), dr[3]->ToString(), dr[2]->ToString(), dr[6]->ToString(), dr[7]->ToString(), dr[4]->ToString());
+		}
+		dr->Close();
+		con->Close();
+	}
 };
 }
