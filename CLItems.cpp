@@ -60,13 +60,12 @@ int NS_Models::CLItems::getItems_quantity(void)
 }
 String^ NS_Models::CLItems::SELECT()
 {
-	return "feur";
-	}
+	return "EXECUTE SelectItem @item_reference ='"+getItems_reference()+"'";
+}
 String^ NS_Models::CLItems::INSERT()
 {
 	return "EXECUTE InsertItem @reference ='"+getItems_reference()+"', @quantity = '"+getItems_quantity()+"', @color = '"+ getColors()+"', @type = '"+ getType() +"', @name = '"+ getName() + "', @price = '"+getPrice_df()+"'";
-	return "feur";
-	}
+}
 String^ NS_Models::CLItems::UPDATE()
 {
 	return "feur";

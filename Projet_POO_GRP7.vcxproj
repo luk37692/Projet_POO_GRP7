@@ -142,6 +142,7 @@
     <ClCompile Include="CustomerAddForm.cpp" />
     <ClCompile Include="CLOrders.cpp" />
     <ClCompile Include="CLPeople.cpp" />
+    <ClCompile Include="ItemAddForm.cpp" />
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="UserLogin.cpp" />
   </ItemGroup>
@@ -172,6 +173,9 @@
     <ClInclude Include="CLMilestone_payments.h" />
     <ClInclude Include="CLOrders.h" />
     <ClInclude Include="CLPeople.h" />
+    <ClInclude Include="ItemAddForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>

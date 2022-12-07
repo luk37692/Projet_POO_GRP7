@@ -84,9 +84,6 @@
     <ClCompile Include="CustomerAddForm.cpp">
       <Filter>Forms\Fichiers source</Filter>
     </ClCompile>
-    <ClCompile Include="AddressAddForm.cpp">
-      <Filter>Forms\Fichiers d%27en-tête</Filter>
-    </ClCompile>
     <ClCompile Include="dbConnect.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
@@ -145,6 +142,12 @@
       <Filter>Fichiers de Services</Filter>
     </ClCompile>
     <ClCompile Include="MyForm.cpp">
+      <Filter>Forms\Fichiers source</Filter>
+    </ClCompile>
+    <ClCompile Include="AddressAddForm.cpp">
+      <Filter>Forms\Fichiers source</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemAddForm.cpp">
       <Filter>Forms\Fichiers source</Filter>
     </ClCompile>
   </ItemGroup>
@@ -307,6 +310,15 @@
     </ClInclude>
     <ClInclude Include="pch.h">
       <Filter>Fichiers de Mappage</Filter>
+    </ClInclude>
+    <ClInclude Include="dbConnect.h">
+      <Filter>Fichiers de Mappage</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Fichiers de Mappage</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemAddForm.h">
+      <Filter>Forms\Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
