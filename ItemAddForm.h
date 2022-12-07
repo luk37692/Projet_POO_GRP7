@@ -34,16 +34,27 @@ namespace ProjetPOOGRP7 {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::TextBox^ quantityItem_text;
+	public: System::Windows::Forms::TextBox^ quantityItem_text;
+	protected:
+
 	protected:
 	private: System::Windows::Forms::Label^ label16;
-	private: System::Windows::Forms::TextBox^ colorItem_text;
+	public: System::Windows::Forms::TextBox^ colorItem_text;
+	private:
+
 	private: System::Windows::Forms::Label^ label17;
-	private: System::Windows::Forms::TextBox^ priceItem_text;
+	public: System::Windows::Forms::TextBox^ priceItem_text;
+	private:
+
 	private: System::Windows::Forms::Label^ label15;
-	private: System::Windows::Forms::TextBox^ typeItem_text;
-	private: System::Windows::Forms::TextBox^ nameItem_text;
-	private: System::Windows::Forms::TextBox^ refitem_text;
+	public: System::Windows::Forms::TextBox^ typeItem_text;
+	private:
+	public: System::Windows::Forms::TextBox^ nameItem_text;
+
+
+	public: System::Windows::Forms::TextBox^ refitem_text;
+	private:
+
 	private: System::Windows::Forms::Label^ label12;
 	private: System::Windows::Forms::Label^ label13;
 	private: System::Windows::Forms::Label^ label14;

@@ -5,6 +5,7 @@
 #include "Ctrl_Employee.h"
 #include "UserLogin.h"
 #include "Ctrl_Items.h"
+#include "ItemAddForm.h"
 namespace ProjetPOOGRP7 {
 
 	using namespace System;
@@ -151,27 +152,6 @@ private: System::Windows::Forms::TextBox^ quantityItem_text;
 
 private: System::Windows::Forms::Label^ label16;
 private: System::Windows::Forms::DataGridView^ dgvProduct;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column1;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column7;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column2;
@@ -181,6 +161,45 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column3;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column4;
 private: System::Windows::Forms::DataGridViewImageColumn^ Edit;
 private: System::Windows::Forms::DataGridViewImageColumn^ Delete;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -305,15 +324,6 @@ private: System::Windows::Forms::DataGridViewImageColumn^ Delete;
 			this->splitter3 = (gcnew System::Windows::Forms::Splitter());
 			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
 			this->dgvProduct = (gcnew System::Windows::Forms::DataGridView());
-			this->Column1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column7 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Type = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column6 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column4 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Edit = (gcnew System::Windows::Forms::DataGridViewImageColumn());
-			this->Delete = (gcnew System::Windows::Forms::DataGridViewImageColumn());
 			this->quantityItem_text = (gcnew System::Windows::Forms::TextBox());
 			this->label16 = (gcnew System::Windows::Forms::Label());
 			this->colorItem_text = (gcnew System::Windows::Forms::TextBox());
@@ -347,6 +357,15 @@ private: System::Windows::Forms::DataGridViewImageColumn^ Delete;
 			this->splitter2 = (gcnew System::Windows::Forms::Splitter());
 			this->tabPage5 = (gcnew System::Windows::Forms::TabPage());
 			this->tabPage6 = (gcnew System::Windows::Forms::TabPage());
+			this->Column1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column7 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Type = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column6 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column4 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Edit = (gcnew System::Windows::Forms::DataGridViewImageColumn());
+			this->Delete = (gcnew System::Windows::Forms::DataGridViewImageColumn());
 			this->Features_tab->SuspendLayout();
 			this->tabPage1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
@@ -627,59 +646,7 @@ private: System::Windows::Forms::DataGridViewImageColumn^ Delete;
 			this->dgvProduct->DefaultCellStyle = dataGridViewCellStyle2;
 			this->dgvProduct->EnableHeadersVisualStyles = false;
 			this->dgvProduct->Name = L"dgvProduct";
-			// 
-			// Column1
-			// 
-			resources->ApplyResources(this->Column1, L"Column1");
-			this->Column1->Name = L"Column1";
-			// 
-			// Column7
-			// 
-			resources->ApplyResources(this->Column7, L"Column7");
-			this->Column7->Name = L"Column7";
-			// 
-			// Column2
-			// 
-			this->Column2->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
-			resources->ApplyResources(this->Column2, L"Column2");
-			this->Column2->Name = L"Column2";
-			// 
-			// Type
-			// 
-			resources->ApplyResources(this->Type, L"Type");
-			this->Type->Name = L"Type";
-			// 
-			// Column6
-			// 
-			this->Column6->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
-			resources->ApplyResources(this->Column6, L"Column6");
-			this->Column6->Name = L"Column6";
-			// 
-			// Column3
-			// 
-			this->Column3->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
-			resources->ApplyResources(this->Column3, L"Column3");
-			this->Column3->Name = L"Column3";
-			// 
-			// Column4
-			// 
-			this->Column4->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
-			resources->ApplyResources(this->Column4, L"Column4");
-			this->Column4->Name = L"Column4";
-			// 
-			// Edit
-			// 
-			this->Edit->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
-			resources->ApplyResources(this->Edit, L"Edit");
-			this->Edit->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Edit.Image")));
-			this->Edit->Name = L"Edit";
-			// 
-			// Delete
-			// 
-			this->Delete->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
-			resources->ApplyResources(this->Delete, L"Delete");
-			this->Delete->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Delete.Image")));
-			this->Delete->Name = L"Delete";
+			this->dgvProduct->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::dgvProduct_CellContentClick);
 			// 
 			// quantityItem_text
 			// 
@@ -873,6 +840,59 @@ private: System::Windows::Forms::DataGridViewImageColumn^ Delete;
 			this->tabPage6->Name = L"tabPage6";
 			this->tabPage6->UseVisualStyleBackColor = true;
 			// 
+			// Column1
+			// 
+			resources->ApplyResources(this->Column1, L"Column1");
+			this->Column1->Name = L"Column1";
+			// 
+			// Column7
+			// 
+			resources->ApplyResources(this->Column7, L"Column7");
+			this->Column7->Name = L"Column7";
+			// 
+			// Column2
+			// 
+			this->Column2->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
+			resources->ApplyResources(this->Column2, L"Column2");
+			this->Column2->Name = L"Column2";
+			// 
+			// Type
+			// 
+			resources->ApplyResources(this->Type, L"Type");
+			this->Type->Name = L"Type";
+			// 
+			// Column6
+			// 
+			this->Column6->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
+			resources->ApplyResources(this->Column6, L"Column6");
+			this->Column6->Name = L"Column6";
+			// 
+			// Column3
+			// 
+			this->Column3->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
+			resources->ApplyResources(this->Column3, L"Column3");
+			this->Column3->Name = L"Column3";
+			// 
+			// Column4
+			// 
+			this->Column4->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
+			resources->ApplyResources(this->Column4, L"Column4");
+			this->Column4->Name = L"Column4";
+			// 
+			// Edit
+			// 
+			this->Edit->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
+			resources->ApplyResources(this->Edit, L"Edit");
+			this->Edit->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Edit.Image")));
+			this->Edit->Name = L"Edit";
+			// 
+			// Delete
+			// 
+			this->Delete->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
+			resources->ApplyResources(this->Delete, L"Delete");
+			this->Delete->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Delete.Image")));
+			this->Delete->Name = L"Delete";
+			// 
 			// MyForm
 			// 
 			resources->ApplyResources(this, L"$this");
@@ -970,8 +990,27 @@ private: System::Windows::Forms::DataGridViewImageColumn^ Delete;
 		String^ colName = dgvProduct->Columns[e->ColumnIndex]->Name;
 		if (colName == "Edit")
 		{
-			
+			ItemAddForm^ additem = gcnew ItemAddForm();
+			additem->refitem_text->Text = dgvProduct->Rows[e->RowIndex]->Cells[1]->Value->ToString();
+			additem->nameItem_text->Text = dgvProduct->Rows[e->RowIndex]->Cells[2]->Value->ToString();
+			additem->typeItem_text->Text = dgvProduct->Rows[e->RowIndex]->Cells[3]->Value->ToString();
+			additem->colorItem_text->Text = dgvProduct->Rows[e->RowIndex]->Cells[4]->Value->ToString();
+			additem->quantityItem_text->Text = dgvProduct->Rows[e->RowIndex]->Cells[5]->Value->ToString();
+			additem->priceItem_text->Text = dgvProduct->Rows[e->RowIndex]->Cells[6]->Value->ToString();
+			additem->ShowDialog();
+			MessageBox::Show("feur");
 		}
+		else if (colName == "Delete")
+		{
+			if (MessageBox::Show("Voulez-vous vraiment supprimer ce produit ?", "Supprimer?", MessageBoxButtons::YesNo, MessageBoxIcon::Question) == Windows::Forms::DialogResult::Yes)
+			{
+				NS_Ctrl::Ctrl_Items^ OB_Ctrl_item = gcnew NS_Ctrl::Ctrl_Items();
+				
+				OB_Ctrl_item->DELETE(Convert::ToString(dgvProduct->Rows[e->RowIndex]->Cells[1]->Value));
+				MessageBox::Show("Record has been successfully deleted!");
+			}
+		}
+		LoadItem();
 	}
 //rechercher item
 	private: System::Void searchItem_button_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -998,5 +1037,22 @@ private: Void LoadItem()
 		dr->Close();
 		con->Close();
 	}
+//private: System::Void updateItem_button_Click(System::Object^ sender, System::EventArgs^ e) {
+//	
+//	try
+//	{
+//		if (MessageBox::Show("Voulez-vous vraiment modifier cet item?", "Update Record", MessageBoxButtons::YesNo, MessageBoxIcon::Question) == System::Windows::Forms::DialogResult::Yes)
+//		{
+//			NS_Ctrl::Ctrl_Items^ OB_Ctrl_item = gcnew NS_Ctrl::Ctrl_Items();
+//			//OB_Ctrl_item->UPDATE
+//		}
+//	}
+//}
+//	   private: System::Void button15_Click(System::Object^ sender, System::EventArgs^ e) {
+//		   NS_Ctrl::Ctrl_Items^ OB_Ctrl_item = gcnew NS_Ctrl::Ctrl_Items();
+//		   //
+//		   OB_Ctrl_item->ADD(refitem_text->Text, typeItem_text->Text, nameItem_text->Text, colorItem_text->Text, Convert::ToDouble(priceItem_text->Text), Convert::ToInt32(quantityItem_text->Text));
+//		   MessageBox::Show("Produit enregistré avec succès.");
+//		   LoadItem();
 };
 }

@@ -15,6 +15,6 @@ namespace NS_Ctrl {
 		DataSet^ listItems(String^);
 		void ADD(String^, String^, String^, String^, float, int);
 		void UPDATE(int, String^, String^, String^, String^, float, int);
-		void DELETE(int);
+		void DELETE(String^);
 	};
 }

@@ -27,8 +27,8 @@ namespace NS_Ctrl {
 		this->OB_Items->setItems_quantity(quantity);
 		this->OB_connect->actionRows(this->OB_Items->UPDATE());
 	}
-	void Ctrl_Items::DELETE(int id) {
-		this->OB_Items->setId_items(id);
+	void Ctrl_Items::DELETE(String^ ref) {
+		this->OB_Items->setItems_reference(ref);
 		this->OB_connect->actionRows(this->OB_Items->DELETE());
 	}
 }

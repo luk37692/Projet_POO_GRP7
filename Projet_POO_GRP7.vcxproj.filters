@@ -320,5 +320,11 @@
     <ClInclude Include="ItemAddForm.h">
       <Filter>Forms\Fichiers d%27en-tête</Filter>
     </ClInclude>
+    <ClInclude Include="dbConnect.h">
+      <Filter>Fichiers de Mappage</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Fichiers de Mappage</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
