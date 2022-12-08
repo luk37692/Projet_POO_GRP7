@@ -126,21 +126,6 @@
     <ClCompile Include="CLquantity_discount.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Ctrl_Customers.cpp">
-      <Filter>Fichiers de Services</Filter>
-    </ClCompile>
-    <ClCompile Include="Ctrl_Employee.cpp">
-      <Filter>Fichiers de Services</Filter>
-    </ClCompile>
-    <ClCompile Include="Ctrl_Items.cpp">
-      <Filter>Fichiers de Services</Filter>
-    </ClCompile>
-    <ClCompile Include="Ctrl_Orders.cpp">
-      <Filter>Fichiers de Services</Filter>
-    </ClCompile>
-    <ClCompile Include="CLmaps.cpp">
-      <Filter>Fichiers de Services</Filter>
-    </ClCompile>
     <ClCompile Include="MyForm.cpp">
       <Filter>Forms\Fichiers source</Filter>
     </ClCompile>
@@ -151,7 +136,22 @@
       <Filter>Forms\Fichiers source</Filter>
     </ClCompile>
     <ClCompile Include="Ctrl_Addresses.cpp">
-      <Filter>Fichiers de Services</Filter>
+      <Filter>Fichiers de Services\Fichiers source</Filter>
+    </ClCompile>
+    <ClCompile Include="Ctrl_Customers.cpp">
+      <Filter>Fichiers de Services\Fichiers source</Filter>
+    </ClCompile>
+    <ClCompile Include="Ctrl_Employee.cpp">
+      <Filter>Fichiers de Services\Fichiers source</Filter>
+    </ClCompile>
+    <ClCompile Include="Ctrl_Items.cpp">
+      <Filter>Fichiers de Services\Fichiers source</Filter>
+    </ClCompile>
+    <ClCompile Include="Ctrl_Orders.cpp">
+      <Filter>Fichiers de Services\Fichiers source</Filter>
+    </ClCompile>
+    <ClCompile Include="CLmaps.cpp">
+      <Filter>Fichiers de Mappage\Fichiers source</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -260,9 +260,6 @@
     <ClInclude Include="pch.h">
       <Filter>Fichiers de Mappage</Filter>
     </ClInclude>
-    <ClInclude Include="CLmaps.h">
-      <Filter>Fichiers de Mappage</Filter>
-    </ClInclude>
     <ClInclude Include="dbConnect.h">
       <Filter>Fichiers de Mappage</Filter>
     </ClInclude>
@@ -323,14 +320,14 @@
     <ClInclude Include="ItemAddForm.h">
       <Filter>Forms\Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="dbConnect.h">
-      <Filter>Fichiers de Mappage</Filter>
-    </ClInclude>
     <ClInclude Include="pch.h">
       <Filter>Fichiers de Mappage</Filter>
     </ClInclude>
+    <ClInclude Include="CLmaps.h">
+      <Filter>Fichiers de Mappage\Fichiers d%27en-tête</Filter>
+    </ClInclude>
     <ClInclude Include="Ctrl_Addresses.h">
-      <Filter>Fichiers de Mappage</Filter>
+      <Filter>Fichiers de Mappage\Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

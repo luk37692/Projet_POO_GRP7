@@ -29,10 +29,10 @@ namespace NS_Models
 		if (getLast_name() != "" && getFirst_name() != "") {
 			return "EXECUTE getPersonWithBillingAddress @last_name_c = '" + getLast_name() + "', @first_name_c = '" + getFirst_name() + "'";
 		}
-		else {
+		else 
+		{
 			return "EXECUTE SelectCustomers";
 		}
-
 	}
 
 	String^ Customer::UPDATE(void) {

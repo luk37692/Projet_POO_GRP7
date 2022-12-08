@@ -68,10 +68,11 @@ String^ NS_Models::CLItems::INSERT()
 }
 String^ NS_Models::CLItems::UPDATE()
 {
-	return "feur";
+	return "";
+	//return "EXECUTE UpdateItem @item_reference = '"+getItems_reference()";
 
 	}
 String^ NS_Models::CLItems::DELETE()
 {
-	return "feur";
+	return "";
 }
